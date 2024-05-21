@@ -1,0 +1,26 @@
+@keyframes smile {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes banner{
+    0% {
+       background-position-x: 0;
+    }
+    100% {
+       background-position-x: 500px;
+    }
+ }
+
+ @keyframes move {
+    0% {
+        transform: translateX(-3%);
+    }
+    100% {
+        transform: translateX(3%);
+    }
+ }

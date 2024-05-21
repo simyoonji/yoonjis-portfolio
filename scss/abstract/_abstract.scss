@@ -1,0 +1,22 @@
+$color-primary: #f5786b;
+$color-black : #1c1c1b;
+$color-white : #fff;
+
+@mixin position-ab(){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin text-hide(){
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);  
+    white-space: nowrap;  
+    border: 0;
+}
