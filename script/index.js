@@ -50,30 +50,16 @@ let observerMain = new IntersectionObserver((entries) => {
         }
     });
 });
-
 observerMain.observe(mainImg);
 observerMain.observe(mainTitle);
 observerMain.observe(mainP);
 
-// 스킬 섹션
-const skills = document.querySelector('.skills');
-const skillsTitle = skills.querySelector('h2');
-const skillsGraphs = skills.querySelectorAll('.skills-graph'); 
-const skillsToolTitle = skills.querySelector('h3');
-const skillsTool = skills.querySelector('.skills-tool-contents');
+// // 스킬 섹션
+// const skills = document.querySelector('.skills');
+// const skillsTitle = skills.querySelector('h2');
+// const skillsGraphs = skills.querySelectorAll('.skills-graph'); 
+// const skillsToolTitle = skills.querySelector('h3');
+// const skillsTool = skills.querySelector('.skills-tool-contents');
 
-let observerSkill = new IntersectionObserver((event) => {
-    event.forEach((item) => {
-        if(item.isIntersecting) {
-            if(item.target === skillsTitle) {
-                item.target.style.opacity = 1;
-                item.target.style.transform = 'translateY(0%)';
-            }else {
-                item.target.style.opacity = 0;
-                item.target.style.transform = 'translateY(-20%)';
-            }
-        }
-    })
-});
 
-observerSkill.observe(skillsTitle);
+// observerMain.observe(skillsTitle); // 이 부분을 수정했습니다.
