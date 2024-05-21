@@ -9,16 +9,18 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// main scroll
+// Intersection Observer를 이용한 스크롤 애니메이션
+
+// 메인 섹션
 const mainImg = document.querySelector('.main-img');
 const mainTitle = document.querySelector('.main-title');
 const mainP = document.querySelector('.main-p');
 
-let observer = new IntersectionObserver((event) => {
-    event.forEach((item) => {
-        if (item.isIntersecting) {
-            if (item.target === mainImg) {
-                item.target.style.opacity = 1;
+let observerMain = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            if (entry.target === mainImg) {
+                entry.target.style.opacity = 1;
 
                 setTimeout(() => {
                     mainTitle.style.opacity = 1;
@@ -33,8 +35,8 @@ let observer = new IntersectionObserver((event) => {
             } 
 
         } else {
-            if (item.target === mainImg) {
-                item.target.style.opacity = 0;
+            if (entry.target === mainImg) {
+                entry.target.style.opacity = 0;
 
                 mainTitle.style.opacity = 0;
                 mainTitle.style.transform = 'translateY(20%)';
@@ -43,18 +45,35 @@ let observer = new IntersectionObserver((event) => {
                 mainP.style.transform = 'translateY(20%)';
 
             } else {
-                item.target.style.opacity = 0;
+                entry.target.style.opacity = 0;
             }
         }
     });
 });
 
-observer.observe(mainImg);
-observer.observe(mainTitle);
-observer.observe(mainP);
+observerMain.observe(mainImg);
+observerMain.observe(mainTitle);
+observerMain.observe(mainP);
 
-//   skills
+// 스킬 섹션
+const skills = document.querySelector('.skills');
+const skillsTitle = skills.querySelector('h2');
+const skillsGraphs = skills.querySelectorAll('.skills-graph'); 
+const skillsToolTitle = skills.querySelector('h3');
+const skillsTool = skills.querySelector('.skills-tool-contents');
 
-let observer = new IntersectionObserver(() => {
-    
-})
+let observerSkill = new IntersectionObserver((event) => {
+    event.forEach((item) => {
+        if(item.isIntersecting) {
+            if(item.target === skillsTitle) {
+                item.target.style.opacity = 1;
+                item.target.style.transform = 'translateY(0%)';
+            }else {
+                item.target.style.opacity = 0;
+                item.target.style.transform = 'translateY(-20%)';
+            }
+        }
+    })
+});
+
+observerSkill.observe(skillsTitle);

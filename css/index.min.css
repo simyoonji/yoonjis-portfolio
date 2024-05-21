@@ -41,12 +41,21 @@ dd {
   font-size: 1.8rem;
 }
 
+.title {
+  display: inline-block;
+  margin: 0 0 5rem 0;
+  font-size: 4rem;
+  color: #fff;
+}
+
 ::-webkit-scrollbar {
+  width: 1rem;
   background-color: #1c1c1b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 119, 0);
+  border-radius: 2rem;
+  background-color: #00E700;
 }
 
 @font-face {
@@ -77,6 +86,54 @@ dd {
   }
   100% {
     transform: translateX(1%);
+  }
+}
+@keyframes rocket {
+  0% {
+    transform: translateY(-2%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(2%) translateX(2%);
+  }
+}
+@keyframes html {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80%;
+  }
+}
+@keyframes css {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 85%;
+  }
+}
+@keyframes scss {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 70%;
+  }
+}
+@keyframes js {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60%;
+  }
+}
+@keyframes PhotoShop {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 90%;
   }
 }
 #home {
@@ -228,10 +285,8 @@ dd {
   margin: 0 auto;
   text-align: center;
 }
-.skills-inner h2 {
-  display: inline-block;
-  margin: 0 0 5rem 0;
-  font-size: 4rem;
+.skills-inner h2 span {
+  animation: rocket 0.5s ease-in-out infinite alternate-reverse;
 }
 .skills-contents {
   display: flex;
@@ -241,37 +296,58 @@ dd {
   margin: 0 auto;
   box-sizing: border-box;
 }
-.skills-contents li span {
+.skills-contents li:nth-of-type(1) span {
+  animation: html 0.5s ease-in-out forwards;
+}
+.skills-contents li:nth-of-type(2) span {
+  animation: css 0.5s ease-in-out forwards;
+}
+.skills-contents li:nth-of-type(3) span {
+  animation: scss 0.5s ease-in-out forwards;
+}
+.skills-contents li:nth-of-type(4) span {
+  animation: js 0.5s ease-in-out forwards;
+}
+.skills-contents li:nth-of-type(5) span {
+  animation: PhotoShop 0.5s ease-in-out forwards;
+}
+.skills-contents li:nth-of-type(6) span {
+  animation: html 0.5s ease-in-out forwards;
+}
+.skills-contents li p {
   position: relative;
   width: 100%;
   height: 25rem;
   border-radius: 1rem;
   border: 0.2rem solid #00E700;
 }
-.skills-contents li span::after {
-  content: "";
+.skills-contents li span {
   position: absolute;
   display: inline-block;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50%;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: #063AA3;
+  transition: height 0.5s ease-in-out;
 }
-.skills-contents li P {
+.skills-contents li h4 {
   line-height: 3rem;
   width: 10rem;
   height: 3rem;
+  margin: 1rem 0 0 0;
   color: #00E700;
   font-size: 2rem;
+}
+.skills-graph {
+  display: none;
 }
 .skills-tool {
   margin: 10rem 0 0 0;
 }
 .skills-tool h3 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-align: center;
 }
 .skills-tool h3 span {
@@ -292,9 +368,24 @@ dd {
 }
 .skills-tool ul li:hover {
   animation: move 0.3s ease-in-out infinite alternate;
+  box-shadow: 0.5rem 0.5rem 1rem 0 #063AA3;
 }
 .skills-tool ul li img {
   width: 100%;
+}
+.skills-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  border-radius: 2rem;
+  font-size: 2rem;
+  background-color: #063AA3;
+}
+.skills-note svg {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 2rem 0 0;
 }
 
 .txt-hide {
@@ -307,6 +398,12 @@ dd {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.animated {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .work {
