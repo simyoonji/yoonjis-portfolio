@@ -73,10 +73,10 @@ dd {
 }
 @keyframes move {
   0% {
-    transform: translateX(-3%);
+    transform: translateX(-1%);
   }
   100% {
-    transform: translateX(3%);
+    transform: translateX(1%);
   }
 }
 #home {
@@ -193,7 +193,7 @@ dd {
 .main-p {
   width: 50%;
   line-height: 2.5rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 .main .deco-line {
   position: absolute;
@@ -219,14 +219,14 @@ dd {
 .skills {
   padding: 10rem 0;
   box-sizing: border-box;
+  border-top: 0.1rem solid #fff;
+  border-bottom: 0.1rem solid #fff;
   color: #fff;
-  border: 1px solid red;
 }
 .skills-inner {
   max-width: 124rem;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid red;
 }
 .skills-inner h2 {
   display: inline-block;
@@ -236,7 +236,7 @@ dd {
 .skills-contents {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  column-gap: 6rem;
   padding: 3rem 0;
   margin: 0 auto;
   box-sizing: border-box;
@@ -244,7 +244,7 @@ dd {
 .skills-contents li span {
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   border-radius: 1rem;
   border: 0.2rem solid #00E700;
 }
@@ -262,10 +262,10 @@ dd {
 }
 .skills-contents li P {
   line-height: 3rem;
-  width: 9rem;
+  width: 10rem;
   height: 3rem;
   color: #00E700;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 .skills-tool {
   margin: 10rem 0 0 0;
@@ -281,7 +281,7 @@ dd {
   display: flex;
   justify-content: center;
   column-gap: 3rem;
-  padding: 5rem 0;
+  padding: 8rem 0;
 }
 .skills-tool ul li {
   position: relative;
@@ -307,4 +307,15 @@ dd {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.work {
+  padding: 10rem 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.work-inner {
+  max-width: 124rem;
+  margin: 0 auto;
+  border: 1px solid red;
 }

@@ -53,4 +53,8 @@ observer.observe(mainImg);
 observer.observe(mainTitle);
 observer.observe(mainP);
 
-  
+//   skills
+
+let observer = new IntersectionObserver(() => {
+    
+})
