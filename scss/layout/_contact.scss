@@ -1,0 +1,30 @@
+.contact {
+    padding: 10rem 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    overflow: hidden;
+
+    &-inner {
+        max-width: 124rem;
+        margin: 0 auto;
+        border: 1px solid red;
+
+        p {
+            -webkit-text-stroke: .1rem  $color-white;
+            font-size: 9rem;
+            text-transform: uppercase;
+            @include transition(opacity 0.5s ease, transform 0.5s ease);
+        }
+    }
+    &-lf {
+        padding: 0 0 2rem 0;
+        box-sizing: border-box;
+        transform: rotate(90deg);
+        transform-origin:left;
+    }
+    &-rt {
+        text-align: end;
+        transform: rotate(-90deg);
+        transform-origin: right;
+    }
+}

@@ -1,4 +1,5 @@
-$color-primary: #f5786b;
+$color-primary: #00E700;
+$color-sub : #063AA3;
 $color-black : #1c1c1b;
 $color-white : #fff;
 
@@ -19,4 +20,11 @@ $color-white : #fff;
     clip: rect(0, 0, 0, 0);  
     white-space: nowrap;  
     border: 0;
+}
+
+@mixin transition($transition...) {
+    transition: $transition;
+    -webkit-transition: $transition;  
+    -moz-transition: $transition;     
+    -o-transition: $transition;       
 }

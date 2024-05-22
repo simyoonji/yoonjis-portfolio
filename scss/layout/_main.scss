@@ -21,7 +21,7 @@
             max-width: 35rem;
             border-radius: 2rem;
             opacity: 0;
-            transition: opacity .5s ease;
+            @include transition(opacity .5s ease);
         }
     }
 
@@ -38,10 +38,8 @@
         }
             em {
                 color: $color-primary;
+                font-weight: 100;
                 text-decoration: underline;
-            }
-            span {
-                animation: smile 1s ease-in-out infinite alternate;
             }
          }
 
@@ -66,5 +64,8 @@
 .animated {
     opacity: 0;
     transform: translateY(20%);
-    transition: opacity .5s ease, transform .5s ease;
+    @include transition(opacity .5s ease,transform .5s ease);
+}
+.move {
+    animation: smile 1s ease-in-out infinite alternate;
 }

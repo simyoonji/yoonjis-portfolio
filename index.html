@@ -21,9 +21,11 @@
 </head>
 
 <body>
+    <!-- mouse -->
+    <div class="mouse"></div>
+
     <!-- container -->
     <div id="container">
-
         <!-- header -->
         <header class="header">
             <nav>
@@ -68,7 +70,7 @@
                 <div class="main-txt">
                     <h2 class="main-title animated">안녕하세요!<br>
                         성실함을 바탕으로 끝없이 달려가는
-                        <em>sim yoonji</em> 입니다. <span>😊</span>
+                        <em>sim yoonji</em> 입니다. <span class="move">😊</span>
                     </h2>
 
                     <p class="main-p animated">사용자의 입장에서 바라보며 신선한 경험 과 편리한 기능을 제공하는 것을 목표로 합니다.
@@ -85,69 +87,107 @@
         <!-- skill -->
         <section id="skills" class="skills">
             <div class="skills-inner">
-                <h2 class="title">
+                <h2 class="title animated">
                     { My Skills <span>🚀</span> }
                 </h2>
 
                 <ul class="skills-contents">
-                    <li>
+                    <li data-explain="1">
                         <p><span class="skills-graph"></span></p>
                         <h4>HTML</h4>
                     </li>
 
-                    <li>
-                        <p><span class="graph"></span></p>
+                    <li data-explain="2">
+                        <p><span class="skills-graph"></span></p>
                         <h4>CSS</h4>
                     </li>
 
-                    <li>
-                        <p><span class="graph"></span></p>
+                    <li data-explain="3">
+                        <p><span class="skills-graph"></span></p>
                         <h4>SCSS</h4>
                     </li>
 
-                    <li>
-                        <p><span class="graph"></span></p>
+                    <li data-explain="4">
+                        <p><span class="skills-graph"></span></p>
                         <h4>JavaScript</h4>
                     </li>
 
-                    <li>
-                        <p><span class="graph"></span></p>
+                    <li data-explain="5">
+                        <p><span class="skills-graph"></span></p>
                         <h4>PhotoShop</h4>
                     </li>
 
-                    <li>
-                        <p><span class="graph"></span></p>
+                    <li data-explain="6">
+                        <p><span class="skills-graph"></span></p>
                         <h4>IllustRator</h4>
                     </li>
                 </ul>
 
+                <ul class="skills-explain">
+                    <li class="active">
+                        <h4>HTML</h4>
+                        <p>웹 표준과 웹 접근성을 인지하며 다양한 웹 브라우저에서 일관되게 작동하도록 보장합니다.
+                            또한, 문서의 가독성을 위한 메타태그로 검색어 최적화 및 문서의 가독성을 향상시킬 수 있습니다
+                        </p>
+                    </li>
+                    <li>
+                        <h4>CSS</h4>
+                        <p> HTML요소의 스타일을 지정하고 레이아웃을 정의 할 수 있습니다.
+                            미디어쿼리를 사용하여 반응형 웹을 만들 수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>SCSS</h4>
+                        <p>
+                            CSS 선택자를 중첩하여 코드의 가독성을 높이고 구조를 정리할 수 있습니다. 변수와 믹스인을 사용해 반복되는 스타일을 효율적으로 관리할 수 있으며, 스타일 시트를
+                            여러 파일로 분리하여 체계적으로 관리할 수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>JavaScript</h4>
+                        <p>
+                            메뉴, 슬라이드, 스크롤 애니메이션 등 다양한 동적 기능은 자바스크립트와 jQuery를 통해 구현할 수 있습니다. 또한, 다양한 JavaScript 플러그인을
+                            사용하여 웹사이트의 기능을 확장하고 사용자 경험을 향상시킬 수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>PhotoShop</h4>
+                        <p>tool을 이용하여 사진 및 그래픽 작업을 효과적으로 처리할 수 있습니다.
+                            또한, 웹 디자인에 필요한 그래픽 요소를 제작할 수 있습니다.</p>
+                    </li>
+                    <li>
+                        <h4>IllustRator</h4>
+                        <p>벡터 기반의 로고, 아이콘, 일러스트 등 도구를 활용하여 디자인을 구현할 수 있습니다.</p>
+                    </li>
+                </ul>
+
                 <div class="skills-tool">
-                    <h3>
+                    <h3 class="animated">
                         <span>💁🏼‍♀️</span> 이런 것도 다룰 수 있어요!
                     </h3>
 
                     <ul class="skills-tool-contents">
-                        <li>
+                        <li class="animated">
                             <p class="txt-hide">Bootstrap</p>
                             <img src="./img/icon/Bootstrap.png" alt="Bootstrap">
                         </li>
 
-                        <li>
+                        <li class="animated">
                             <p class="txt-hide">figma</p>
                             <img src="./img/icon/figma.png" alt="figma">
                         </li>
 
-                        <li>
+                        <li class="animated">
                             <p class="txt-hide">slack</p>
                             <img src="./img/icon/slack.png" alt="slack">
                         </li>
 
-                        <li>
+                        <li class="animated">
                             <p class="txt-hide">trello</p>
                             <img src="./img/icon/trello.png" alt=" trello">
                         </li>
 
-                        <li>
+                        <li class="animated">
                             <p class="txt-hide">github</p>
                             <img src="./img/icon/github.png" alt=" github">
                         </li>
@@ -170,22 +210,43 @@
         <section id="work" class="work">
             <div class="work-inner">
                 <h2 class="title">
-                    work
+                    { work <span>💻</span> }
                 </h2>
 
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
+                    <li>
+                        <h4>project1</h4>
+                    </li>
+                    <li>
+                        <h4>project2</h4>
+                    </li>
+                    <li>
+                        <h4>project3</h4>
+                    </li>
+                    <li>
+                        <h4>project4</h4>
+                    </li>
                 </ul>
             </div>
         </section>
+
+        <footer id="contact" class="contact">
+            <div class="contact-inner">
+                <p class="contact-lf">
+                    Thank you for viewing
+                </p>
+                <p class="contact-rt">
+                    <span class="move">😄</span> my portfolio !
+                </p>
+            </div>
+        </footer>
     </div>
 
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./script/index.js" defer></script>
+    <script src="./script/base.js" defer></script>
+    <script src="./script/animation.js" defer></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 10px;
   font-family: "Pretendard-Regular";
@@ -7,6 +8,7 @@ html {
 body {
   background-color: #1c1c1b;
   overflow-x: hidden;
+  cursor: none;
 }
 
 * {
@@ -22,6 +24,11 @@ a {
   display: block;
   color: inherit;
   text-decoration: none;
+  cursor: none;
+}
+
+button {
+  cursor: none;
 }
 
 em {
@@ -46,6 +53,28 @@ dd {
   margin: 0 0 5rem 0;
   font-size: 4rem;
   color: #fff;
+}
+
+.mouse {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: #00E700;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.2s ease-in, opacity 0.2s ease-in, background-color 0.2s ease-in;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.mouse-change {
+  transform: scale(10);
+  background: url(../img/mouse.png) center center no-repeat;
+  background-size: cover;
+  background-color: none;
 }
 
 ::-webkit-scrollbar {
@@ -154,7 +183,7 @@ dd {
   -webkit-transition: box-shadow 0.5s ease;
   -moz-transition: box-shadow 0.5s ease;
   -o-transition: box-shadow 0.5s ease;
-  z-index: 9999;
+  z-index: 9998;
 }
 .header nav {
   display: flex;
@@ -166,9 +195,16 @@ dd {
 .header nav h1 {
   line-height: 1.2rem;
   font-size: 2.5rem;
+  transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
 }
 .header nav h1 em {
   font-size: 2rem;
+}
+.header nav h1:hover {
+  color: #00E700;
 }
 .header nav svg {
   width: 3.2rem;
@@ -228,6 +264,9 @@ dd {
   border-radius: 2rem;
   opacity: 0;
   transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
 }
 .main-txt {
   display: flex;
@@ -241,11 +280,9 @@ dd {
   font-size: 3rem;
 }
 .main-txt em {
-  color: #f5786b;
+  color: #00E700;
+  font-weight: 100;
   text-decoration: underline;
-}
-.main-txt span {
-  animation: smile 1s ease-in-out infinite alternate;
 }
 .main-p {
   width: 50%;
@@ -271,6 +308,13 @@ dd {
   opacity: 0;
   transform: translateY(20%);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  -webkit-transition: opacity 0.5s ease, transform 0.5s ease;
+  -moz-transition: opacity 0.5s ease, transform 0.5s ease;
+  -o-transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.move {
+  animation: smile 1s ease-in-out infinite alternate;
 }
 
 .skills {
@@ -285,14 +329,29 @@ dd {
   margin: 0 auto;
   text-align: center;
 }
+.skills-inner h2 {
+  position: relative;
+}
 .skills-inner h2 span {
   animation: rocket 0.5s ease-in-out infinite alternate-reverse;
+}
+.skills-inner h2::after {
+  content: "그래프 위에 마우스를 올려주세요";
+  display: inline-block;
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: #eeeeee;
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 .skills-contents {
   display: flex;
   justify-content: center;
   column-gap: 6rem;
-  padding: 3rem 0;
+  padding: 3rem 0 5rem 0;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -323,14 +382,18 @@ dd {
 }
 .skills-contents li span {
   position: absolute;
-  display: inline-block;
+  display: none;
   left: 0;
   bottom: 0;
   width: 100%;
+  border-top: 1px solid #00E700;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: #063AA3;
   transition: height 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
 }
 .skills-contents li h4 {
   line-height: 3rem;
@@ -342,6 +405,35 @@ dd {
 }
 .skills-graph {
   display: none;
+}
+.skills-explain {
+  position: relative;
+  margin: 0 auto;
+  width: 70%;
+  text-align: start;
+}
+.skills-explain li {
+  display: flex;
+  position: absolute;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 100;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  -webkit-transition: opacity 0.1s ease;
+  -moz-transition: opacity 0.1s ease;
+  -o-transition: opacity 0.1s ease;
+}
+.skills-explain li h4 {
+  margin: 0 2rem 0 0;
+  color: #00E700;
+}
+.skills-explain li p {
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+.skills-explain .active {
+  opacity: 1;
 }
 .skills-tool {
   margin: 10rem 0 0 0;
@@ -409,4 +501,41 @@ dd {
   max-width: 124rem;
   margin: 0 auto;
   border: 1px solid red;
+}
+.work-inner h2 {
+  display: block;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.contact {
+  padding: 10rem 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+  overflow: hidden;
+}
+.contact-inner {
+  max-width: 124rem;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.contact-inner p {
+  -webkit-text-stroke: 0.1rem #fff;
+  font-size: 9rem;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  -webkit-transition: opacity 0.5s ease, transform 0.5s ease;
+  -moz-transition: opacity 0.5s ease, transform 0.5s ease;
+  -o-transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.contact-lf {
+  padding: 0 0 2rem 0;
+  box-sizing: border-box;
+  transform: rotate(90deg);
+  transform-origin: left;
+}
+.contact-rt {
+  text-align: end;
+  transform: rotate(-90deg);
+  transform-origin: right;
 }
