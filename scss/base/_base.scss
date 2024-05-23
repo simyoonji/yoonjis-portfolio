@@ -39,6 +39,13 @@ dd {
     color: #666666;
     font-size: 1.8rem;
 }
+section {
+    padding: 10rem 0;
+    box-sizing: border-box;
+    border-top : .1rem solid $color-white;
+    color: $color-white;
+    overflow: hidden;
+}
 .title {
     display: inline-block;
     margin: 0 0 5rem 0;

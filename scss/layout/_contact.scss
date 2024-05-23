@@ -1,13 +1,7 @@
 .contact {
-    padding: 10rem 0;
-    box-sizing: border-box;
-    border: 1px solid red;
-    overflow: hidden;
-
     &-inner {
         max-width: 124rem;
         margin: 0 auto;
-        border: 1px solid red;
 
         p {
             -webkit-text-stroke: .1rem  $color-white;

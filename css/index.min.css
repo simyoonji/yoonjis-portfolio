@@ -48,6 +48,14 @@ dd {
   font-size: 1.8rem;
 }
 
+section {
+  padding: 10rem 0;
+  box-sizing: border-box;
+  border-top: 0.1rem solid #fff;
+  color: #fff;
+  overflow: hidden;
+}
+
 .title {
   display: inline-block;
   margin: 0 0 5rem 0;
@@ -240,12 +248,10 @@ dd {
   font-size: 2rem;
 }
 
-.main {
-  padding: 10rem 0;
-  box-sizing: border-box;
-  color: #fff;
-  overflow: hidden;
+.color {
+  color: #00E700;
 }
+
 .main-inner {
   position: relative;
   display: flex;
@@ -317,13 +323,12 @@ dd {
   animation: smile 1s ease-in-out infinite alternate;
 }
 
-.skills {
-  padding: 10rem 0;
-  box-sizing: border-box;
-  border-top: 0.1rem solid #fff;
-  border-bottom: 0.1rem solid #fff;
-  color: #fff;
+.about-inner {
+  max-width: 124rem;
+  margin: 0 auto;
+  border: 1px solid red;
 }
+
 .skills-inner {
   max-width: 124rem;
   margin: 0 auto;
@@ -492,10 +497,18 @@ dd {
   border: 0;
 }
 
+.rotate {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
 .work {
   padding: 10rem 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  border-top: 0.1rem solid #fff;
 }
 .work-inner {
   max-width: 124rem;
@@ -505,19 +518,48 @@ dd {
 .work-inner h2 {
   display: block;
   text-align: center;
+}
+.work-tab {
+  position: relative;
+  display: flex;
+  color: #fff;
+  height: 55rem;
+  font-size: 2rem;
   border: 1px solid red;
+}
+.work-title {
+  line-height: 5rem;
+  width: 10rem;
+  height: 5rem;
+  border-top: 0.1rem solid #00E700;
+  border-left: 0.1rem solid #00E700;
+  border-right: 0.1rem solid #00E700;
+  border-bottom: 0.1rem solid #00E700;
+  text-align: center;
+}
+.work-contents {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  width: 100%;
+  height: 50rem;
+  border: 0.1rem solid #00E700;
 }
 
-.contact {
-  padding: 10rem 0;
-  box-sizing: border-box;
-  border: 1px solid red;
-  overflow: hidden;
+.block {
+  display: block;
 }
+
+.focus {
+  color: #00E700;
+  background-color: #fff;
+  border-bottom: none;
+}
+
 .contact-inner {
   max-width: 124rem;
   margin: 0 auto;
-  border: 1px solid red;
 }
 .contact-inner p {
   -webkit-text-stroke: 0.1rem #fff;

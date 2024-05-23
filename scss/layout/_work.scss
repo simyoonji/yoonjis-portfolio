@@ -1,7 +1,7 @@
 .work {
     padding: 10rem 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    border-top : .1rem solid $color-white;
 
     &-inner {
         max-width: 124rem;
@@ -11,7 +11,46 @@
         h2 {
             display: block;
             text-align: center;
-            border: 1px solid red;
         }
     }
+
+    &-tab {
+        position: relative;
+        display: flex;
+        color: #fff;
+        height: 55rem;
+        font-size: 2rem;
+        border: 1px solid red;
+    }
+    &-list {
+    }
+    &-title {
+        line-height: 5rem;
+        width: 10rem;
+        height: 5rem;
+        border : {
+            top: .1rem solid $color-primary;
+            left: .1rem solid $color-primary;
+            right: .1rem solid $color-primary;
+            bottom: .1rem solid $color-primary;
+        }
+        text-align: center;
+    }
+    &-contents {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 5rem;
+        width: 100%;
+        height: 50rem;
+        border: .1rem solid $color-primary;
+    }
+}
+.block {
+    display: block;
+}
+.focus {
+    color: $color-primary;
+    background-color: $color-white;
+    border-bottom: none;
 }
