@@ -6,7 +6,6 @@
         transform: rotate(-10deg);
     }
 }
-
 @keyframes banner{
     0% {
        background-position-x: 0;
@@ -15,6 +14,13 @@
        background-position-x: 500px;
     }
  }
+@keyframes border {
+    0% {
+        border: .2;
+     }
+     100% {
+     }
+}
 
  @keyframes move {
     0% {

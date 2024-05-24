@@ -48,6 +48,11 @@ dd {
   font-size: 1.8rem;
 }
 
+strong {
+  color: #00E700;
+  font-weight: 100;
+}
+
 section {
   padding: 10rem 0;
   box-sizing: border-box;
@@ -115,6 +120,11 @@ section {
   }
   100% {
     background-position-x: 500px;
+  }
+}
+@keyframes border {
+  0% {
+    border: 0.2;
   }
 }
 @keyframes move {
@@ -285,15 +295,15 @@ section {
   text-align: center;
   font-size: 3rem;
 }
-.main-txt em {
-  color: #00E700;
-  font-weight: 100;
+.main-txt strong {
   text-decoration: underline;
 }
 .main-p {
   width: 50%;
-  line-height: 2.5rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1rem;
   font-size: 2rem;
+  font-weight: 100;
 }
 .main .deco-line {
   position: absolute;
@@ -323,10 +333,84 @@ section {
   animation: smile 1s ease-in-out infinite alternate;
 }
 
-.about-inner {
+.profile {
+  border-top: none;
+}
+.profile-inner {
+  display: flex;
+  justify-content: center;
   max-width: 124rem;
+  height: 100%;
   margin: 0 auto;
-  border: 1px solid red;
+}
+.profile-inner > div {
+  width: 50%;
+}
+.profile-card {
+  margin: 0 auto;
+  perspective: 1000px;
+  position: relative;
+  width: 40rem;
+  height: 50rem;
+  transform-style: preserve-3d;
+  transform: rotate(-5deg);
+  transition: transform 0.5s ease, background 0.5s ease;
+  -webkit-transition: transform 0.5s ease, background 0.5s ease;
+  -moz-transition: transform 0.5s ease, background 0.5s ease;
+  -o-transition: transform 0.5s ease, background 0.5s ease;
+}
+.profile-card li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+.profile-card-front {
+  background: url(../img/profile-img-1.png) center center no-repeat;
+  background-size: cover;
+  border: 0.2rem solid #00E700;
+}
+.profile-card-back {
+  background: url(../img/profile-img-2.png) center center no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+.profile-txt {
+  height: 100%;
+}
+.profile-txt ul {
+  margin: 0 0 5rem 0;
+}
+.profile-txt ul li {
+  color: transparent;
+  font-size: 8rem;
+  -webkit-text-stroke: 0.1rem #fff;
+}
+.profile-txt span {
+  display: block;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: width 0.5s ease;
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+}
+.profile-txt p {
+  width: 90%;
+  padding: 5rem 0 0 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.profile-txt p strong {
+  color: #00E700;
+}
+
+.flip {
+  transform: rotateY(180deg) rotate(-5deg);
 }
 
 .skills-inner {

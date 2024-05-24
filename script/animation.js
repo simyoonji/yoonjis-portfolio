@@ -10,7 +10,7 @@ let observer = new IntersectionObserver((event) => {
       headerMenuList.forEach(color => {
         color.classList.remove(COLOR);
 
-        // link값 가져오고 #제거작업을 한것과 === 현재 보이는 serction의 id값을 가져온다.
+        // link값 가져오고 #제거작업을 한것과 === 현재 보이는 section id값을 가져온다.
         if (color.getAttribute('href').substring(1) === item.target.id) {
           color.classList.add(COLOR);
         }
@@ -67,6 +67,33 @@ observerMain.observe(mainImg);
 observerMain.observe(mainTitle);
 observerMain.observe(mainP);
 
+// card scroll animation
+const profileInner = document.querySelector('.profile-inner');
+const profileCard = profileInner.querySelector('.profile-card');
+const FLIP = 'flip';
+
+document.addEventListener('DOMContentLoaded', () => {
+    let observerCard = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    profileCard.classList.add(FLIP);
+                }, 300);
+
+                setTimeout(() => {
+                    profileLine.classList.add(FULL);
+                }, 600)
+                
+            } else {
+                profileCard.classList.remove(FLIP);
+                profileLine.classList.remove(FULL);
+            }
+        });
+    });
+    observerCard.observe(profileInner);
+});
+
+
 // skills scroll animation
 const skills = document.querySelector('.skills');
 const skillsTitle = skills.querySelector('h2');
@@ -100,7 +127,7 @@ observerSkills.observe(skills);
 observerSkills.observe(skillsTitle);
 skillsGraph.forEach(span => observerSkills.observe(span));
 
-// skiilsTool Area
+// skillsTool Area
 const skillsTool = document.querySelector('.skills-tool');
 const skillsToolTitle = skillsTool.querySelector('h3');
 const skillsToolList = skillsTool.querySelectorAll('li');
@@ -140,7 +167,7 @@ observerSkillsTool.observe(skillsTool);
 observerSkillsTool.observe(skillsToolTitle);
 skillsToolList.forEach(li => observerSkillsTool.observe(li));
 
-// contatct area
+// contact area
 const contact = document.querySelector('.contact');
 const contactLf = contact.querySelector('.contact-lf');
 const contactRt = contact.querySelector('.contact-rt');

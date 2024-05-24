@@ -31,17 +31,17 @@
             text-align: center;
             font-size: 3rem;
         }
-            em {
-                color: $color-primary;
-                font-weight: 100;
+        strong {
                 text-decoration: underline;
             }
          }
 
          &-p {
             width: 50%;
-            line-height: 2.5rem;
+            line-height: 2.8rem;
+            letter-spacing: .1rem;
             font-size: 2rem;
+            font-weight: 100;
          }
          
     .deco-line {
