@@ -6,7 +6,6 @@
     &-inner {
         max-width: 124rem;
         margin: 0 auto;
-        border: 1px solid red;
 
         h2 {
             display: block;
@@ -20,9 +19,9 @@
         color: #fff;
         height: 55rem;
         font-size: 2rem;
-        border: 1px solid red;
     }
     &-list {
+
     }
     &-title {
         line-height: 5rem;
@@ -42,15 +41,40 @@
         left: 0;
         top: 5rem;
         width: 100%;
-        height: 50rem;
-        border: .1rem solid $color-primary;
+        padding: 3rem;
+        box-sizing: border-box;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+        background-color: $color-white;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            li {
+                width: 100%;
+                height: 380px;
+                border-radius: 2rem;
+                box-shadow: 0 0 .5rem 0 #00000058;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 2rem;
+                }
+            }
+        }
     }
 }
+
+// classList
 .block {
     display: block;
 }
 .focus {
     color: $color-primary;
     background-color: $color-white;
-    border-bottom: none;
+    border-bottom: transparent !important;
 }

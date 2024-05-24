@@ -79,14 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     profileCard.classList.add(FLIP);
                 }, 300);
-
-                setTimeout(() => {
-                    profileLine.classList.add(FULL);
-                }, 600)
-                
             } else {
                 profileCard.classList.remove(FLIP);
-                profileLine.classList.remove(FULL);
             }
         });
     });
@@ -141,12 +135,17 @@ let observerSkillsTool = new IntersectionObserver((event) => {
                 item.target.style.opacity = 1;
                 item.target.style.transform = 'translateY(0%)';
 
-                skillsToolList.forEach((li, index) => {
-                    li.style.opacity = 1;
-                    li.style.transform = 'translateX(0)';
-                    li.style.transition = `transform 0.5s ease ${index * 0.1}s, opacity 0.5s ease ${index * 0.1}s`;
-                });
-                skillsToolIcon.classList.add(ROTATE);
+                setTimeout(() => {
+                    skillsToolList.forEach((li, index) => {
+                        li.style.opacity = 1;
+                        li.style.transform = 'translateX(0)';
+                        li.style.transition = `transform 0.5s ease ${index * 0.1}s, opacity 0.5s ease ${index * 0.1}s`;
+                    });
+                }, 500);
+
+                setTimeout(() => {
+                    skillsToolIcon.classList.add(ROTATE);
+                }, 1000)
             }
         } else {
             if (item.target === skillsToolTitle) {
