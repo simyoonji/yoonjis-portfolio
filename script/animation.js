@@ -18,7 +18,6 @@ let observer = new IntersectionObserver((event) => {
     }
   });
 });
-
 sections.forEach(item => {
   observer.observe(item);
 });
@@ -64,8 +63,6 @@ let observerMain = new IntersectionObserver((event) => {
     });
 });
 observerMain.observe(mainImg);
-observerMain.observe(mainTitle);
-observerMain.observe(mainP);
 
 // card scroll animation
 const profileInner = document.querySelector('.profile-inner');
@@ -86,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     observerCard.observe(profileInner);
 });
-
 
 // skills scroll animation
 const skills = document.querySelector('.skills');
@@ -118,8 +114,6 @@ let observerSkills = new IntersectionObserver((event) => {
     });
 });
 observerSkills.observe(skills);
-observerSkills.observe(skillsTitle);
-skillsGraph.forEach(span => observerSkills.observe(span));
 
 // skillsTool Area
 const skillsTool = document.querySelector('.skills-tool');
@@ -161,10 +155,7 @@ let observerSkillsTool = new IntersectionObserver((event) => {
         }
     });
 });
-
-observerSkillsTool.observe(skillsTool);
 observerSkillsTool.observe(skillsToolTitle);
-skillsToolList.forEach(li => observerSkillsTool.observe(li));
 
 // contact area
 const contact = document.querySelector('.contact');

@@ -62,7 +62,6 @@ strong {
 section {
   padding: 10rem 0;
   box-sizing: border-box;
-  border-top: 0.1rem solid #fff;
   color: #fff;
   overflow: hidden;
 }
@@ -665,6 +664,9 @@ section {
   border-bottom: transparent !important;
 }
 
+.contact {
+  border-top: 0.1rem solid #fff;
+}
 .contact-inner {
   max-width: 124rem;
   margin: 0 auto;
