@@ -1,14 +1,31 @@
 .skills {
+    border-top: .1rem solid $color-white;
+    
     &-inner {
         max-width: 124rem;
         margin: 0 auto;
         text-align: center;
 
+        @include mq('767') {
+            max-width: none;
+            width: 100%;
+        }
+
         h2 {
             position: relative;
-            
+
             span {
                 animation: rocket .5s ease-in-out infinite alternate-reverse;
+            }
+            @include mq('767') {
+               font-size: 3rem;
+               @include transition(font-size .2s ease);
+            }
+            @include mq('600') {
+                font-size: 2.5rem;
+             }
+             @include mq('480') {
+                font-size: 1.8rem;
             }
 
             &::after {
@@ -19,11 +36,16 @@
                 left: 50%;
                 transform: translateX(-50%);
                 width: 100%;
-                color: #eeeeee;
+                color: #dddddd;
                 font : {
                     size: 1.4rem;
                     weight: 100;
                 }
+
+                @include mq('600') {
+                    font-size: 1.3rem;
+                    @include transition(font-size .2s ease);
+                 }
             }
         }
     }
@@ -31,39 +53,81 @@
         display: flex;
         justify-content: center;
         column-gap: 6rem;
-        padding: 3rem 0 8rem 0;
+        padding: 5rem 0 8rem 0;
         margin: 0 auto;
         box-sizing: border-box;
 
+        @include mq('980') {
+            column-gap: 2rem;
+            @include transition(column-gap .2s ease,row-gap .2s ease,padding .2s ease);
+        }
+        @include mq('767') {
+            flex-direction: column;
+            column-gap:0rem;
+            row-gap: 2rem;
+            padding: 5rem 3rem 5rem 3rem;
+        }
+        @include mq('480') {
+            padding: 5rem 0rem;
+        }
+
         li {
+            @include mq('767') {
+                position: relative;
+            } 
+
             &:nth-of-type(1) {
                 span {
                     animation: html .5s ease-in-out forwards;
+
+                    @include mq('767') {
+                        animation: html-2 .5s ease-in-out forwards;
+                    } 
                 }
             }
             &:nth-of-type(2) {
                 span {
                     animation: css .5s ease-in-out forwards;
+
+                    @include mq('767') {
+                        animation: css-2 .5s ease-in-out forwards;
+                    } 
                 }
             }
             &:nth-of-type(3) {
                 span {
                     animation: scss .5s ease-in-out forwards;
+
+                    @include mq('767') {
+                        animation: scss-2 .5s ease-in-out forwards;
+                    } 
                 }
             }
             &:nth-of-type(4) {
                 span {
                     animation: js .5s ease-in-out forwards;
+
+                    @include mq('767') {
+                        animation: js-2 .5s ease-in-out forwards;
+                    } 
                 }
             }
             &:nth-of-type(5) {
                 span {
                     animation: PhotoShop .5s ease-in-out forwards;
+
+                    @include mq('767') {
+                        animation: PhotoShop-2 .5s ease-in-out forwards;
+                    } 
                 }
             }
             &:nth-of-type(6) {
                 span {
                     animation: html .5s ease-in-out forwards;
+
+                    @include mq('767') {
+                        animation: html-2 .5s ease-in-out forwards;
+                    } 
                 }
             }
             p {
@@ -71,7 +135,18 @@
                 width: 100%;
                 height: 25rem;
                 border-radius: 1rem;
-                border: .2rem solid $color-primary;
+                box-shadow: 0 0 0 .2rem $color-primary;
+
+                @include mq('767') {
+                    height: 3rem;
+                    @include transition(height .2s ease);
+                }
+                @include mq('600') {
+                    height: 2.8rem;
+                }
+                @include mq('480') {
+                    height: 2rem;
+                }
             }
             span {
                 position: absolute;
@@ -80,12 +155,24 @@
                 bottom: 0;
                 width: 100%;
                 border : {
-                    top: 1px solid $color-primary;
+                    top: .1rem solid $color-primary;
                     bottom-left-radius: 1rem;
                     bottom-right-radius: 1rem;
                 }
                 background-color: $color-sub;
                 @include transition(height .5s ease-in-out);
+
+                @include mq('767') {
+                    width: auto;
+                    height: 100%;
+
+                    border : {
+                        top: none;
+                        top-left-radius: 1rem;
+                        bottom-right-radius: 0rem;
+                    }
+                }
+                
             }
             h4 {
                 line-height: 3rem;
@@ -94,18 +181,41 @@
                 margin: 1rem 0 0 0;
                 color: $color-primary;
                 font-size: 2rem;
+
+                @include mq('767') {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin: 0rem 0 0 0;
+
+                    font: {
+                        size: 1.6rem;
+                        weight: 500;
+                    }
+                    @include transition(margin .2s ease, font-size .2s ease);
+                }
+                @include mq('600') {
+                    left: -1rem;
+                    font-size: 1.4rem;
+                }
+                @include mq('480') {
+                    font-size: 1.1rem;
+                }
             }
         }
     }
     &-graph {
         display: none;
     }
-
     &-explain {
         position: relative;
         margin: 0 auto;
         width: 70%;
         text-align: start;
+
+        @include mq('767') {
+            width: 100%;
+        }
 
         li {
             display: flex;
@@ -118,13 +228,34 @@
             opacity: 0;
             @include transition(opacity .1s ease);
 
+            @include mq('600') {
+                padding: 1rem 0;
+                font-size: 1.3rem;
+                @include transition(padding .2s ease, font-size .2s ease);
+            }
+            @include mq('480') {
+                flex-direction: column;
+                font-size: 1.1rem;
+            }
+
             h4 {
                 margin: 0 2rem 0 0;
                 color: $color-primary;
+
+                @include mq('480') {
+                    margin: 0 0rem 1rem 0;
+                    text-align: center;
+                    @include transition(margin .2s ease);
+                }
             }
              p {
                 line-height: 2rem;
                 letter-spacing: .1rem;
+
+                @include mq('600') {
+                    line-height: 1.9rem;
+                    @include transition(line-height .2s ease);
+                }
              }
         }
         .active {
@@ -135,10 +266,25 @@
     &-tool {
         margin: 13rem 0 0 0;
 
+        @include mq('480') {
+            margin: 16rem 0 0 0;
+            @include transition(margin .2s ease);
+        }
+
         h3 {
             font-size: 4rem;
             text-align: center;
 
+            @include mq('767') {
+                font-size: 3rem;
+                @include transition(font-size .2s ease);
+             }
+             @include mq('600') {
+                font-size: 2.5rem;
+             }
+             @include mq('480') {
+                font-size: 1.8rem;
+            }
             span {
                 animation: smile 1s ease-in-out infinite alternate;
             }
@@ -150,6 +296,18 @@
             column-gap: 3rem;
             padding: 8rem 0;
 
+            @include mq('767') {
+                column-gap: 2rem;
+                @include transition(column-gap .2s ease, padding .2s ease);
+             }
+             @include mq('600') {
+                column-gap: 1.5rem;
+             }
+             @include mq('480') {
+                column-gap: 1rem;
+                padding: 5rem 0;
+            }
+
             li {
                 position: relative;
                 width: 10rem;
@@ -157,11 +315,24 @@
                 border-radius: 30%;
                 background-color: #eeeeee;
 
+                @include mq('767') {
+                    width: 8rem;
+                    height: 8rem;
+                    @include transition(width .2s ease, height .2s ease);
+                 }
+                 @include mq('600') {
+                    width: 6rem;
+                    height: 6rem;
+                }
+                @include mq('480') {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
                 &:hover {
                     animation: move .3s ease-in-out infinite alternate;
                     box-shadow: .5rem .5rem 1rem 0 $color-sub;
                 }
-
                 img {
                     width: 100%;
                 }
@@ -177,10 +348,34 @@
         font-size: 2rem;
         background-color: $color-sub;
 
+        @include mq('767') {
+            font-size: 1.6rem;
+            @include transition(font-size .2s ease, padding .2s ease);
+         }
+        @include mq('600') {
+            padding: .5rem 0;
+            font-size: 1.4rem;
+        }
+        @include mq('480') {
+            padding: .5rem 2rem;
+            font-size: 1.3rem;
+        }
+        @include mq('480') {
+            padding: .5rem 2rem;
+            font-size: 1.1rem;
+        }
+
         svg {
             width: 3rem;
             height: 3rem;
             margin: 0 2rem 0 0;
+
+            @include mq('480') {
+               width: 2.5rem;
+               height: 2.5rem;
+               margin: 0 1rem 0 0;
+               @include transition(width .2s ease, height .2s ease, margin .2s ease);
+            }
         }
     }
 }

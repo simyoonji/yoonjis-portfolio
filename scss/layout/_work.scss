@@ -10,6 +10,10 @@
         h2 {
             display: block;
             text-align: center;
+
+            span {
+                animation: upDown 1s ease-in alternate-reverse infinite;
+            }
         }
     }
 

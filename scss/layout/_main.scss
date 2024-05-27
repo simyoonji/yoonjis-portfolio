@@ -1,4 +1,8 @@
 .main {
+    @include mq('480') {
+        padding: 10rem 2rem 7rem 2rem;
+    }
+
     &-inner {
         position: relative;
         display: flex;
@@ -64,7 +68,7 @@
                 font-size: 1.8rem;
             }
             @include mq('480') {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
         }
         strong {
@@ -92,13 +96,14 @@
                 font-size: 1.6rem;
             }
             @include mq('600') {
-                width: 90%;
                 line-height: 1.9rem;
+                width: 90%;
                 font-size: 1.3rem;
             }
             @include mq('480') {
+                line-height: 1.5rem;
                 width: 100%;
-                line-height: 1.8rem;
+                font-size: 1.1rem;
             }
          }
          
