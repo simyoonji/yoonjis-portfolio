@@ -146,6 +146,7 @@
                 }
                 @include mq('480') {
                     height: 2rem;
+                    box-shadow: 0 0 0 .1rem $color-primary;
                 }
             }
             span {
@@ -207,6 +208,7 @@
     &-graph {
         display: none;
     }
+
     &-explain {
         position: relative;
         margin: 0 auto;

@@ -1072,6 +1072,7 @@ section {
 @media screen and (max-width: 480px) {
   .skills-contents li p {
     height: 2rem;
+    box-shadow: 0 0 0 0.1rem #00E700;
   }
 }
 .skills-contents li span {

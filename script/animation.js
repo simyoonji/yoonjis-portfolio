@@ -76,6 +76,7 @@ observerMain.observe(mainImg);
 // card scroll animation
 const profileInner = document.querySelector('.profile-inner');
 const profileCard = profileInner.querySelector('.profile-card');
+const profileTitle = profileInner.querySelector('.profile-txt');
 const FLIP = 'flip';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -83,14 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
-                    entry.target.classList.add(FLIP);
+                   profileCard.classList.add(FLIP);
                 }, 300);
             } else {
-                entry.target.classList.remove(FLIP);
+               profileCard.classList.remove(FLIP);
             }
         });
     });
-    observerCard.observe(profileCard);
+    observerCard.observe(profileTitle);
 });
 
 
