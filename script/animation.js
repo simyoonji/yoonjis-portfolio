@@ -1,4 +1,3 @@
-// header
 // header scroll
 const header = document.querySelector('.header');
 
@@ -84,15 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
-                    profileCard.classList.add(FLIP);
+                    entry.target.classList.add(FLIP);
                 }, 300);
             } else {
-                profileCard.classList.remove(FLIP);
+                entry.target.classList.remove(FLIP);
             }
         });
     });
-    observerCard.observe(profileInner);
+    observerCard.observe(profileCard);
 });
+
 
 // skills scroll animation
 const skills = document.querySelector('.skills');
