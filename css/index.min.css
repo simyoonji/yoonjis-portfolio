@@ -527,26 +527,28 @@ section {
 }
 @media screen and (max-width: 980px) {
   .main-p {
+    line-height: 2.5rem;
     width: 80%;
     font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 767px) {
   .main-p {
+    line-height: 2.2rem;
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
   .main-p {
     width: 90%;
-    line-height: 2.1rem;
+    line-height: 1.9rem;
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 480px) {
   .main-p {
     width: 100%;
-    line-height: 2rem;
+    line-height: 1.8rem;
   }
 }
 .main .deco-line {
@@ -600,6 +602,12 @@ section {
 
 .profile {
   border-top: none;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .profile {
+    padding: 5rem 2rem;
+  }
 }
 .profile-inner {
   display: flex;
@@ -608,6 +616,7 @@ section {
   height: 100%;
   margin: 0 auto;
   /* tablet */
+  /* mobile */
 }
 @media screen and (max-width: 980px) {
   .profile-inner {
@@ -615,8 +624,23 @@ section {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .profile-inner {
+    flex-direction: column;
+    transition: flex-direction 0.2s ease;
+    -webkit-transition: flex-direction 0.2s ease;
+    -moz-transition: flex-direction 0.2s ease;
+    -o-transition: flex-direction 0.2s ease;
+  }
+}
 .profile-inner > div {
   width: 50%;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .profile-inner > div {
+    width: 100%;
+  }
 }
 .profile-card {
   margin: 0 auto;
@@ -632,6 +656,9 @@ section {
   -o-transition: transform 0.5s ease, background 0.5s ease, width 0.2s ease, height 0.2s ease;
   /* desktop */
   /* tablet */
+  /* mobile */
+  /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   .profile-card {
@@ -643,6 +670,30 @@ section {
   .profile-card {
     width: 22rem;
     height: 32rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile-card {
+    width: 30rem;
+    height: 40rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile-card {
+    width: 25rem;
+    height: 35rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile-card {
+    width: 22rem;
+    height: 32rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .profile-card {
+    width: 18rem;
+    height: 28rem;
   }
 }
 .profile-card li {
@@ -669,7 +720,23 @@ section {
   height: 100%;
 }
 .profile-txt ul {
-  margin: 0 0 5rem 0;
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .profile-txt ul {
+    padding: 5rem 3rem 0 3rem;
+    box-sizing: border-box;
+    transition: padding 0.2s ease;
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile-txt ul {
+    padding: 5rem 0rem 0 0rem;
+  }
 }
 .profile-txt ul li {
   color: transparent;
@@ -682,6 +749,8 @@ section {
   -o-transition: font-size 0.2s ease;
   /* desktop */
   /* tablet */
+  /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   .profile-txt ul li {
@@ -691,6 +760,28 @@ section {
 @media screen and (max-width: 980px) {
   .profile-txt ul li {
     font-size: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile-txt ul li {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile-txt ul li {
+    position: relative;
+    color: #fff;
+    font-size: 3rem;
+  }
+  .profile-txt ul li::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0.1rem;
+    background-color: #fff;
   }
 }
 .profile-txt span {
@@ -703,11 +794,15 @@ section {
   -o-transition: width 0.5s ease;
 }
 .profile-txt p {
-  width: 90%;
+  width: 100%;
   padding: 5rem 0 0 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 100;
+  word-break: keep-all;
   /* tablet */
+  /* mobile */
+  /* mobile */
+  /* mobile */
 }
 .profile-txt p strong {
   color: #00E700;
@@ -715,7 +810,25 @@ section {
 @media screen and (max-width: 980px) {
   .profile-txt p {
     padding: 3rem 0 0 0;
-    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile-txt p {
+    width: 90%;
+    padding: 5rem 0 0 0;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile-txt p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile-txt p {
+    width: 100%;
   }
 }
 

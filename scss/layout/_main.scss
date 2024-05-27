@@ -83,20 +83,22 @@
             @include transition(width .2s ease, font-size .2s ease);
 
             @include mq('980') {
+                line-height: 2.5rem;
                 width: 80%;
                 font-size: 1.8rem;
             }
             @include mq('767') {
+                line-height: 2.2rem;
                 font-size: 1.6rem;
             }
             @include mq('600') {
                 width: 90%;
-                line-height: 2.1rem;
+                line-height: 1.9rem;
                 font-size: 1.3rem;
             }
             @include mq('480') {
                 width: 100%;
-                line-height: 2rem;
+                line-height: 1.8rem;
             }
          }
          

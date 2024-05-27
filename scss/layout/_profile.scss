@@ -1,6 +1,10 @@
 .profile {
     border-top: none;
 
+    @include mq('767') {
+        padding: 5rem 2rem;
+     }
+
     &-inner {
         display: flex;
         justify-content: center;
@@ -12,12 +16,18 @@
             max-width: none;
             width: 100%;
          }
+         @include mq('767') {
+            flex-direction: column;
+            @include transition(flex-direction .2s ease);
+         }
 
         > div {
             width: 50%;
+
+            @include mq('767') {
+                width: 100%;
+             }
         }
-    }
-    &-left {
     }
     &-card {
         margin: 0 auto;
@@ -37,6 +47,22 @@
             width: 22rem;
             height: 32rem;
          }
+         @include mq('767') {
+            width: 30rem;
+            height: 40rem;
+         }
+         @include mq('600') {
+            width: 25rem;
+            height: 35rem;
+        }
+        @include mq('480') {
+            width: 22rem;
+            height: 32rem;
+        }
+        @include mq('320') {
+            width: 18rem;
+            height: 28rem;
+        }
         
         li {
             display: flex;
@@ -65,8 +91,14 @@
         height: 100%;
 
         ul {
-            margin: 0 0 5rem 0;
-
+            @include mq('767') {
+               padding: 5rem 3rem 0 3rem;
+               box-sizing: border-box;
+               @include transition(padding .2s ease);
+            }
+            @include mq('480') {
+                padding: 5rem 0rem 0 0rem;
+            }
             li {
                 color: transparent;
                 font-size: 7.5rem;
@@ -80,6 +112,25 @@
                  @include mq('980') {
                     font-size: 5rem;
                  }
+                 @include mq('600') {
+                    font-size: 4rem;
+                }
+                @include mq('480') {
+                    position: relative;
+                    color: $color-white;
+                    font-size: 3rem;
+
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: .1rem;
+                        background-color: $color-white;
+                    }
+                }
             }
         }
         span {
@@ -89,21 +140,32 @@
             @include transition(width 0.5s ease);
         }
         p {
-            width: 90%;
+            width: 100%;
             padding: 5rem 0 0 0;
             font : {
-                size: 2rem;
+                size: 1.8rem;
                 weight: 100;
             }
-            
+            word-break: keep-all;
             strong{
                 color: $color-primary;
             }
-
             @include mq('980') {
-              padding: 3rem 0 0 0;
-              font-size: 1.8rem;
-             }
+                padding: 3rem 0 0 0;
+            }
+            @include mq('767') {
+                width: 90%;
+                padding: 5rem 0 0 0;
+                margin: 0 auto;
+                font-size: 1.6rem;
+                text-align: center;
+            }
+            @include mq('600') {
+                font-size: 1.3rem;
+            }
+            @include mq('480') {
+                width: 100%;
+            }
         }
     }
 }
