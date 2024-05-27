@@ -86,6 +86,13 @@ section {
   transition: transform 0.2s ease-in, opacity 0.2s ease-in, background-color 0.2s ease-in;
   z-index: 9999;
   mix-blend-mode: difference;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .mouse {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .mouse-change {
@@ -93,6 +100,12 @@ section {
   background: url(../img/mouse.png) center center no-repeat;
   background-size: cover;
   background-color: none;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .mouse-change {
+    transform: scale(5);
+  }
 }
 
 ::-webkit-scrollbar {
@@ -1236,10 +1249,6 @@ section {
 @media screen and (max-width: 767px) {
   .skills-tool h3 {
     font-size: 3rem;
-    transition: font-size 0.2s ease;
-    -webkit-transition: font-size 0.2s ease;
-    -moz-transition: font-size 0.2s ease;
-    -o-transition: font-size 0.2s ease;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1577,10 +1586,27 @@ section {
 
 .contact {
   border-top: 0.1rem solid #fff;
+  /* mobile */
+}
+@media screen and (max-width: 480px) {
+  .contact {
+    padding: 7rem 2rem;
+    transition: padding 0.2s ease;
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+  }
 }
 .contact-inner {
   max-width: 124rem;
   margin: 0 auto;
+  /* tablet */
+}
+@media screen and (max-width: 980px) {
+  .contact-inner {
+    max-width: none;
+    width: 100%;
+  }
 }
 .contact-inner p {
   -webkit-text-stroke: 0.1rem #fff;
@@ -1591,10 +1617,34 @@ section {
   -moz-transition: opacity 0.5s ease, transform 0.5s ease, font-size 0.2s ease;
   -o-transition: opacity 0.5s ease, transform 0.5s ease, font-size 0.2s ease;
   /* desktop */
+  /* tablet */
+  /* mobile */
+  /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   .contact-inner p {
     font-size: 7rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .contact-inner p {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-inner p {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-inner p {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-inner p {
+    font-size: 2rem;
   }
 }
 .contact-lf {

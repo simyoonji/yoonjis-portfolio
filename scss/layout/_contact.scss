@@ -1,17 +1,40 @@
 .contact {
     border-top: .1rem solid $color-white;
+
+    @include mq('480') {
+       padding: 7rem 2rem;
+       @include transition(padding .2s ease);
+    }
+
     &-inner {
         max-width: 124rem;
         margin: 0 auto;
+
+        @include mq('980') {
+           max-width: none;
+           width: 100%;
+         }
 
         p {
             -webkit-text-stroke: .1rem  $color-white;
             font-size: 9rem;
             text-transform: uppercase;
-            @include transition(opacity 0.5s ease, transform 0.5s ease,font-size .2s ease);
+            @include transition(opacity 0.5s ease, transform 0.5s ease, font-size .2s ease);
 
             @include mq('1200'){
                 font-size: 7rem; 
+            }
+            @include mq('980'){
+                font-size: 5rem;
+            }
+            @include mq('767') {
+                font-size: 4rem;
+            }
+            @include mq('600') {
+                font-size: 3rem;
+            }
+            @include mq('480') {
+                font-size: 2rem;
             }
         }
     }

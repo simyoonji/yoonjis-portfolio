@@ -74,12 +74,21 @@ section {
                 background-color .2s ease-in;
     z-index: 9999;
     mix-blend-mode:difference;
+
+    @include mq('767') {
+        width: 1rem;
+        height: 1rem;
+    }
 }
 .mouse-change {
     transform: scale(10);
     background: url(../img/mouse.png)center center no-repeat;
     background-size: cover;
     background-color: none;
+
+    @include mq('767') {
+        transform: scale(5);
+    }
 }
 ::-webkit-scrollbar {
     width: 1rem;

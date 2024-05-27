@@ -1,29 +1,21 @@
 // skills active하면 보여준다.
-const skillsContentsLi = document.querySelectorAll('.skills-contents li');
-const skillsExplainLi = document.querySelectorAll('.skills-explain li');
+const skillsContentsList = document.querySelectorAll('.skills-contents li');
+const skillsExplainList = document.querySelectorAll('.skills-explain li');
 const ACTIVE = 'active';
 
-skillsContentsLi.forEach(item => {
-    // data-explain값
+skillsContentsList.forEach(item => {
     const explainId = item.getAttribute('data-explain');
     const explanationElement = document.querySelector(`.skills-explain li:nth-child(${explainId})`);
 
     item.addEventListener('mouseover', () => {
         activateExplanation(explanationElement);
     });
-    item.addEventListener('mouseout', () => {
-        deactivateExplanation(explanationElement);
-    });
 });
-
 activateExplanation = (explanationElement) => {
-    skillsExplainLi.forEach(item => {
+    skillsExplainList.forEach(item => {
         item.classList.remove(ACTIVE);
     });
     explanationElement.classList.add(ACTIVE);
-}
-deactivateExplanation = (explanationElement) => {
-    explanationElement.classList.remove(ACTIVE);
 }
 
 // work tab menu
