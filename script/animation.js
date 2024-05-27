@@ -1,4 +1,15 @@
 // header
+// header scroll
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY <= 100) {
+        header.classList.remove('scroll');
+    } else {
+        header.classList.add('scroll');
+    }
+});
+
 const headerMenuList = document.querySelectorAll('.page');
 const sections = document.querySelectorAll('section');
 const COLOR = 'color';
@@ -10,7 +21,6 @@ let observer = new IntersectionObserver((event) => {
       headerMenuList.forEach(color => {
         color.classList.remove(COLOR);
 
-        // link값 가져오고 #제거작업을 한것과 === 현재 보이는 section id값을 가져온다.
         if (color.getAttribute('href').substring(1) === item.target.id) {
           color.classList.add(COLOR);
         }

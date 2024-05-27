@@ -8,7 +8,11 @@
             -webkit-text-stroke: .1rem  $color-white;
             font-size: 9rem;
             text-transform: uppercase;
-            @include transition(opacity 0.5s ease, transform 0.5s ease);
+            @include transition(opacity 0.5s ease, transform 0.5s ease,font-size .2s ease);
+
+            @include mq('1200'){
+                font-size: 7rem; 
+            }
         }
     }
     &-lf {

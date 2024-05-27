@@ -9,11 +9,9 @@ skillsContentsLi.forEach(item => {
     const explanationElement = document.querySelector(`.skills-explain li:nth-child(${explainId})`);
 
     item.addEventListener('mouseover', () => {
-        // 설명 활성화하는 함수. 설명항목을 활성화하여 보이도록 만들어준다. 
         activateExplanation(explanationElement);
     });
     item.addEventListener('mouseout', () => {
-        // 설명함수 비활성화.
         deactivateExplanation(explanationElement);
     });
 });

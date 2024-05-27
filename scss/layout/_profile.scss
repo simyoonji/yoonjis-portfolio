@@ -8,6 +8,11 @@
         height: 100%;
         margin: 0 auto;
 
+        @include mq('980') {
+            max-width: none;
+            width: 100%;
+         }
+
         > div {
             width: 50%;
         }
@@ -22,7 +27,16 @@
         height: 50rem;
         transform-style: preserve-3d;
         transform: rotate(-5deg);
-        @include transition(transform 0.5s ease, background 0.5s ease);
+        @include transition(transform 0.5s ease, background 0.5s ease, width .2s ease, height .2s ease);
+
+        @include mq('1200') {
+            width: 32rem;
+            height: 42rem;
+         }
+         @include mq('980') {
+            width: 22rem;
+            height: 32rem;
+         }
         
         li {
             display: flex;
@@ -55,8 +69,17 @@
 
             li {
                 color: transparent;
-                font-size: 8rem;
+                font-size: 7.5rem;
                 -webkit-text-stroke: .1rem $color-white;
+                white-space: nowrap;
+                @include transition(font-size .2s ease);
+
+                @include mq('1200') {
+                    font-size: 6rem;
+                 }
+                 @include mq('980') {
+                    font-size: 5rem;
+                 }
             }
         }
         span {
@@ -76,6 +99,11 @@
             strong{
                 color: $color-primary;
             }
+
+            @include mq('980') {
+              padding: 3rem 0 0 0;
+              font-size: 1.8rem;
+             }
         }
     }
 }

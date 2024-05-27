@@ -2,18 +2,16 @@
     height: 100vh;
 }
 .scroll {
-    box-shadow: .5rem .5rem 2rem #ffffffc1;
+    box-shadow: .5rem .5rem 2rem #ffffff27;
 }
 .header {
     position: fixed;
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
     color: $color-white;
     background-color: $color-black;
-    transition: box-shadow .5s ease;
-    -webkit-transition: box-shadow .5s ease;
-    -moz-transition: box-shadow .5s ease;
-    -o-transition: box-shadow .5s ease;
+    @include transition(box-shadow .5s ease);
     z-index: 9998;
 
     nav {
@@ -26,13 +24,34 @@
         h1 {
             line-height: 1.2rem;
             font-size: 2.5rem;
-            transition: color .2s ease;
-            -webkit-transition: color .2s ease;
-            -moz-transition: color .2s ease;
-            -o-transition: color .2s ease;
+            @include transition(color .2s ease, line-height .2s ease,font-size .2s ease);
+
+            @include mq('980') {
+                line-height: 1rem;
+                font-size: 2rem;
+            }
+            @include mq('600') {
+                line-height: .7rem;
+                font-size: 1.5rem;
+            }
+            @include mq('480') {
+                font-size: 1.3rem;
+            }
             
             em {
                 font-size: 2rem;
+                @include transition(font-size .2s ease);
+
+                @include mq('980') {
+                    font-size: 1.5rem;
+                }
+                @include mq('600') {
+                    font-size: 1.2rem;
+                }
+                @include mq('480') {
+                    font-size: 1.1rem;
+                }
+                
             }
             &:hover {
                 color: $color-primary;
@@ -41,6 +60,24 @@
         svg {
             width: 3.2rem;
             height: 3.2rem;
+            @include transition(width .2s ease, height .2s ease);
+
+            @include mq('980') {
+                width: 3rem;
+                height: 3rem;
+            }
+            @include mq('767') {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            @include mq('600') {
+                width: 2rem;
+                height: 2rem;
+            }
+            @include mq('480') {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
         }
     }
 
@@ -48,6 +85,18 @@
         display: flex;
         gap: 2rem;
 
+        @include mq('980') {
+            gap: 1.5rem;
+        }
+        @include mq('767') {
+            gap: 1rem;
+        }
+        @include mq('600') {
+            gap: .5rem;
+        }
+        @include mq('480') {
+            gap: .1rem;
+        }
         li {
             position: relative;
 
@@ -60,7 +109,7 @@
                 height: 0;
                 background-color: $color-white;
                 z-index: -1;
-                transition: height .2s ease;
+                @include transition(height .2s ease);
             }
 
             &:hover {
@@ -74,7 +123,24 @@
             a {
                 padding: 1rem 1.5rem;
                 box-sizing: border-box;
-                font-size: 2rem
+                font-size: 2rem;
+                @include transition(font-size .2s ease, padding .2s ease);
+
+                @include mq('980') {
+                    padding: 1rem 1.2rem;
+                    font-size: 1.8rem;
+                }
+                @include mq('767') {
+                    padding: 1rem;
+                    font-size: 1.6rem;
+                }
+                @include mq('600') {
+                    padding: 1rem .5rem;
+                    font-size: 1.3rem;
+                }
+                @include mq('480') {
+                    font-size: 1.1rem;
+                }
             }
         }
     }

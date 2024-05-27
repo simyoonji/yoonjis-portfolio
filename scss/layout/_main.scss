@@ -10,13 +10,35 @@
         box-sizing: border-box;
         overflow: hidden;
         z-index: 2;
+        @include transition(padding .2s ease);
+
+        @include mq('980') {
+           max-width: none;
+           width: 100%;
+        }
+        @include mq('600') {
+            padding: 2rem 0 0 0;
+        }
+        @include mq('480') {
+            padding: 1rem 0 0 0;
+        }
         
         .main-img {
             position: relative;
             max-width: 35rem;
             border-radius: 2rem;
             opacity: 0;
-            @include transition(opacity .5s ease);
+            @include transition(opacity .5s ease, max-width .2s ease);
+
+            @include mq('980') {
+                max-width: 30rem;
+            }
+            @include mq('480') {
+                max-width: 25rem;
+            }
+            @include mq('320') {
+                max-width: 20rem;
+            }
         }
     }
 
@@ -30,6 +52,20 @@
             margin: 0 0 3rem 0;
             text-align: center;
             font-size: 3rem;
+            word-break: keep-all;
+
+            @include mq('980') {
+                font-size: 2.5rem;
+            }
+            @include mq('767') {
+                font-size: 2rem;
+            }
+            @include mq('600') {
+                font-size: 1.8rem;
+            }
+            @include mq('480') {
+                font-size: 1.5rem;
+            }
         }
         strong {
                 text-decoration: underline;
@@ -39,9 +75,29 @@
          &-p {
             width: 50%;
             line-height: 2.8rem;
+            font : {
+                size: 2rem;
+                weight: 100;
+            }
             letter-spacing: .1rem;
-            font-size: 2rem;
-            font-weight: 100;
+            @include transition(width .2s ease, font-size .2s ease);
+
+            @include mq('980') {
+                width: 80%;
+                font-size: 1.8rem;
+            }
+            @include mq('767') {
+                font-size: 1.6rem;
+            }
+            @include mq('600') {
+                width: 90%;
+                line-height: 2.1rem;
+                font-size: 1.3rem;
+            }
+            @include mq('480') {
+                width: 100%;
+                line-height: 2rem;
+            }
          }
          
     .deco-line {
@@ -54,6 +110,17 @@
         animation: banner 20s infinite linear alternate-reverse;
         overflow: hidden;
         z-index: 1;
+        @include transition(height .2s ease,top .2s ease);
+
+        @include mq('600') {
+            height: 5rem;
+        }
+        @include mq('480') {
+            top: 40%;
+        }
+        @include mq('320') {
+            top: 38%;
+        }
     }
 }
 .animated {
