@@ -45,7 +45,11 @@
                 @include mq('600') {
                     font-size: 1.3rem;
                     @include transition(font-size .2s ease);
-                 }
+                }
+                @include mq('480') {
+                    font-size: 1.1rem;
+                    bottom: -1.5rem;
+                }
             }
         }
     }
@@ -252,7 +256,6 @@
             }
              p {
                 line-height: 2rem;
-                letter-spacing: .1rem;
 
                 @include mq('600') {
                     line-height: 1.9rem;

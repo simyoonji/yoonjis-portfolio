@@ -83,7 +83,6 @@
                 size: 2rem;
                 weight: 100;
             }
-            letter-spacing: .1rem;
             @include transition(width .2s ease, font-size .2s ease);
 
             @include mq('980') {

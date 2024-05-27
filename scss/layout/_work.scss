@@ -11,6 +11,17 @@
             display: block;
             text-align: center;
 
+            @include mq('767') {
+                font-size: 3rem;
+                @include transition(font-size .2s ease);
+            }
+            @include mq('600') {
+                font-size: 2.5rem;
+            }
+            @include mq('480') {
+                font-size: 1.8rem;
+            }
+
             span {
                 animation: upDown 1s ease-in alternate-reverse infinite;
             }
@@ -21,15 +32,19 @@
         position: relative;
         display: flex;
         height: 90rem;
+
+        @include mq('767') {
+            height: 167rem;
+            @include transition(height .2s ease);
+        }
     }
     &-list {
         color: $color-black;
     }
     &-title {
         line-height: 5rem;
-        width: 12rem;
-        height: 5rem;
-        margin: 0 0 0 2rem;
+        width: 11rem;
+        margin: 0 0 0 1rem;
         border : {
             top-left-radius: 1rem;
             top-right-radius: 1rem;
@@ -37,7 +52,26 @@
         color: $color-primary;
         font-size: 1.6rem;
         text-transform: uppercase;
-        letter-spacing: .1rem;
+
+        @include mq('980'){
+            font-size: 1.5rem;
+            @include transition(font-size .2s ease, width .2s ease, margin .2s ease,line-height .2s ease);
+        }
+        @include mq('767') {
+            line-height: 4em;
+            width: 8.5rem;
+            font-size: 1.3rem;
+        }
+        @include mq('600') {
+            line-height: 3em;
+            width: 8.5rem;
+        }
+        @include mq('480') {
+            line-height: 2.8em;
+            width: 5rem;
+            margin: 0 0 0 .8rem;
+            font-size: 1rem;
+        }
     }
     &-contents {
         display: none;
@@ -47,19 +81,40 @@
         width: 100%;
         padding: 3rem;
         box-sizing: border-box;
-        border-radius: 2rem;
+        border-radius: 1rem;
         background-color: $color-white;
 
+        @include mq('980') {
+            padding: 2rem;
+            @include transition(padding .2s ease);
+        }
+        @include mq('767') {
+            top: 4.5rem;
+        }
+        @include mq('600') {
+            top: 3.5rem;
+        }
+        @include mq('480') { 
+            top: 2.8rem;
+            padding: .8rem;
+        }
         ul {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
 
+            @include mq('767') {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0rem;
+                row-gap: 2rem;
+                @include transition(gap .2s ease);
+            }
+
             li {
                 position: relative;
                 width: 100%;
                 height: 380px;
-                border-radius: 2rem;
+                border-radius: 1rem;
                 box-shadow: 0 0 .5rem 0 #00000058;
                 overflow: hidden;
 
@@ -72,8 +127,23 @@
                 img {
                     width: 100%;
                     height: 100%;
+                    border-radius: 1rem;
                     object-fit: cover;
-                    border-radius: 2rem;
+
+                    &:nth-of-type(1){
+                        display: block;
+
+                        @include mq('480') {
+                           display: none;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        display: none;
+
+                        @include mq('480') {
+                            display: block;
+                        }
+                    }
                 }
             }
         }
@@ -86,7 +156,7 @@
             height: 100%;
             padding: 1rem;
             box-sizing: border-box;
-            border-radius: 2rem;
+            border-radius: 1rem;
             background-color: #fff;
 
             &-inner {
@@ -99,13 +169,26 @@
             h4 {
                 padding: 0 0 .8rem 0;
                 margin: 0 0 2rem 0;
-                text-align: center;
-                font-size: 2rem;
-                font-weight: 500;
                 border-bottom: .1rem solid #444444;
+                font : {
+                    size: 1.8rem;
+                    weight: 500;
+                }
+                text-align: center;
+
+                @include mq('600') {
+                    font-size: 1.6rem;
+                    @include transition(font-size .2s ease);
+                }
 
                 span {
-                    font-weight: bold;
+                    @include mq('600') {
+                        font-size: 1.3rem;
+                        @include transition(font-size .2s ease);
+                    }
+                    @include mq('480') {
+                        font-size: 1.2rem;
+                    }
                 }
                 .sidmool {
                     color:#92c501;
@@ -113,7 +196,7 @@
                 .koreanAir {
                     color: #0064de;
                 }
-                .profile {
+                .work-contents-profile {
                     color: rgb(255, 119, 0);
                 }
                 .muvic {
@@ -141,13 +224,32 @@
                     padding: .5rem 0;
                     margin: 0 2rem 0 0;
                     border-radius: 1rem;
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     text-align: center;
                     background-color: #eeeeee;
+
+                    @include mq('600') {
+                        width: 5rem;
+                        @include transition(width .2s ease, font-size .2s ease, margin .2s ease);
+                    }
+                    @include mq('480') {
+                        width: 4rem;
+                        margin: 0 .5rem 0 0;
+                        font-size: 1.1rem;
+                    }
                 }
                 dd {
+                    display: flex;
                     padding: 0 1rem 0 0;
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
+
+                    @include mq('600') {
+                        font-size: 1.3rem;
+                        @include transition(font-size .2s ease);
+                    }
+                    @include mq('480') {
+                        font-size: 1.2rem;
+                    }
 
                     a {
                         color: $color-sub;
@@ -158,7 +260,15 @@
             p {
                 padding: 1.5rem 0;
                 box-sizing: border-box;
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+
+                @include mq('600') {
+                    font-size: 1.3rem;
+                    @include transition(font-size .2s ease);
+                }
+                @include mq('480') {
+                    font-size: 1.1rem;
+                }
             }
 
             &-btn {
@@ -180,6 +290,14 @@
                     font-size: 1.6rem;
                     box-shadow: 0 0 .7rem 0 #00000018;
 
+                    @include mq('600') {
+                        padding: .5rem 1rem;
+                        @include transition(font-size .2s ease,padding .2s ease);
+                    }
+                    @include mq('480') {
+                        font-size: 1.3rem;
+                    }
+
                     &:hover {
                         animation: upDown .5s ease-in alternate-reverse infinite;
                     }
@@ -188,7 +306,17 @@
         }
     }
 }
-
+.no-img {
+    &:hover {
+        img {
+            filter: grayscale(0%);
+        }
+    }
+    img {
+        filter: grayscale(100%);
+        @include transition(filter .5s ease);
+    }
+}
 // classList
 .block {
     display: block;
