@@ -1373,10 +1373,6 @@ section {
     width: 2.5rem;
     height: 2.5rem;
     margin: 0 1rem 0 0;
-    transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
-    -webkit-transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
-    -moz-transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
-    -o-transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
   }
 }
 
