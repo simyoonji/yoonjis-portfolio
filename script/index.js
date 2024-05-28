@@ -1,3 +1,23 @@
+// top btn
+const topBtn = document.querySelector('.top');
+
+window.addEventListener('scroll', () => {
+    const scroll = document.documentElement.scrollTop
+  if (scroll > 1000) {
+        topBtn.style.opacity = 1;  
+  } else {
+        topBtn.style.opacity = 0;  
+  }
+});
+
+// 맨 위로 스크롤 함수
+const scrollToTop = () => {
+  document.documentElement.scrollTop = 0;
+};
+
+// 버튼 클릭 이벤트 리스너
+topBtn.addEventListener('click', scrollToTop);
+
 // skills active하면 보여준다.
 const skillsContentsList = document.querySelectorAll('.skills-contents li');
 const skillsExplainList = document.querySelectorAll('.skills-explain li');

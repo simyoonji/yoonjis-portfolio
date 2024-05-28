@@ -56,7 +56,7 @@ button {
 }
 
 strong {
-  color: #00E700;
+  color: #00e700;
   font-weight: 100;
 }
 
@@ -80,7 +80,7 @@ section {
   transform: translate(-50%, -50%);
   width: 2rem;
   height: 2rem;
-  background-color: #00E700;
+  background-color: #00e700;
   border-radius: 50%;
   pointer-events: none;
   transition: transform 0.2s ease-in, opacity 0.2s ease-in, background-color 0.2s ease-in;
@@ -115,7 +115,7 @@ section {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 2rem;
-  background-color: #00E700;
+  background-color: #00e700;
 }
 
 @font-face {
@@ -249,6 +249,70 @@ section {
     transform: translateY(10%);
   }
 }
+.top {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4078431373);
+  opacity: 0;
+  z-index: 9998;
+  transition: opacity 0.2s ease, right 0.2s ease, bottom 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  -webkit-transition: opacity 0.2s ease, right 0.2s ease, bottom 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  -moz-transition: opacity 0.2s ease, right 0.2s ease, bottom 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  -o-transition: opacity 0.2s ease, right 0.2s ease, bottom 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  /* mobile */
+  /* mobile */
+}
+.top:hover {
+  background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .top {
+    right: 2rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top {
+    right: 1rem;
+    bottom: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.top img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .top img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: width 0.2s ease, height 0.2s ease;
+    -webkit-transition: width 0.2s ease, height 0.2s ease;
+    -moz-transition: width 0.2s ease, height 0.2s ease;
+    -o-transition: width 0.2s ease, height 0.2s ease;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
 #home {
   height: 100vh;
 }
