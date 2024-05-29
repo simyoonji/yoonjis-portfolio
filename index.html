@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- meta -->
+    <meta name="author" content="Sim Yoonji">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="심윤지 포트폴리오 입니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://simyoonji.github.io/yoonjis-portfolio/">
     <meta property="og:title" content="SimYoonji portfolio">
     <meta property="og:image" content="https://simyoonji.github.io/yoonjis-portfolio/img/main-img-3.jpg">
-    <meta property="og:description" content="심윤지 포트폴리오 입니다">
+    <meta property="og:description" content="심윤지 포트폴리오 입니다.">
     <meta name="keywords" content="웹 퍼블리셔, 포트폴리오, 웹 퍼블리셔 포트폴리오, 신입 웹퍼블리셔 포트폴리오">
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -23,7 +26,7 @@
     <!-- mouse -->
     <div class="mouse"></div>
     <!-- top btn -->
-    <div class="top">
+    <div aria-label="사이트의 맨 위로 이동합니다." class="top">
         <img src="./img/icon/top.png" alt="top-button">
     </div>
     <!-- container -->
@@ -31,7 +34,7 @@
         <!-- header -->
         <header class="header">
             <nav>
-                <h1>
+                <h1 aria-label="로고 입니다">
                     SIM<br>
                     <em>yoonji</em>
                 </h1>
@@ -52,7 +55,7 @@
                     </li>
                 </ul>
 
-                <a href="https://github.com/simyoonji">
+                <a aria-label="깃허브로 이동하기" href="https://github.com/simyoonji">
                     <!-- git -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                         <path style="fill:#ffffff;"
@@ -208,27 +211,27 @@
                     </h3>
 
                     <ul class="skills-tool-contents">
-                        <li class="animated">
+                        <li aria-label="부트스트랩 아이콘 입니다." class="animated">
                             <p class="txt-hide">Bootstrap</p>
                             <img src="./img/icon/Bootstrap.png" alt="Bootstrap">
                         </li>
 
-                        <li class="animated">
+                        <li aria-label="피그마 아이콘 입니다." class="animated">
                             <p class="txt-hide">figma</p>
                             <img src="./img/icon/figma.png" alt="figma">
                         </li>
 
-                        <li class="animated">
+                        <li aria-label="슬랙 아이콘 입니다." class="animated">
                             <p class="txt-hide">slack</p>
                             <img src="./img/icon/slack.png" alt="slack">
                         </li>
 
-                        <li class="animated">
+                        <li aria-label="트렐로 아이콘 입니다." class="animated">
                             <p class="txt-hide">trello</p>
                             <img src="./img/icon/trello.png" alt=" trello">
                         </li>
 
-                        <li class="animated">
+                        <li aria-label="깃허브 아이콘 입니다." class="animated">
                             <p class="txt-hide">github</p>
                             <img src="./img/icon/github.png" alt=" github">
                         </li>
@@ -257,7 +260,7 @@
                 <ul class="work-tab">
                     <!-- list -->
                     <li class="work-list">
-                        <button class="work-title focus">
+                        <button aria-label="개인프로젝트를 보여줍니다." class="work-title focus">
                             alone
                         </button>
 
@@ -279,8 +282,10 @@
                                             <dl>
                                                 <dt>Page</dt>
                                                 <dd>main</dd>
-                                                <dd><a href="https://sidmool-redesign.netlify.app/login">login</a></dd>
-                                                <dd><a href="https://sidmool-redesign.netlify.app/about">about</a></dd>
+                                                <dd><a aria-label="시드물 로그인 페이지로 이동합니다."
+                                                        href="https://sidmool-redesign.netlify.app/login">login</a></dd>
+                                                <dd><a aria-label="시드물 기업소개 페이지로 이동합니다."
+                                                        href="https://sidmool-redesign.netlify.app/about">about</a></dd>
                                             </dl>
                                             <dl>
                                                 <dt>Tool</dt>
@@ -300,7 +305,8 @@
                                                 기존 페이지에서 볼 수 있던 정보들을 한눈에 볼 수 있도록 나열했습니다.</p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://sidmool-redesign.netlify.app/#none">
+                                                <a aria-label="시드물 웹 사이트로 이동합니다."
+                                                    href="https://sidmool-redesign.netlify.app/#none">
                                                     view
                                                 </a>
                                             </div>
@@ -344,7 +350,8 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://simyoonji.github.io/KoreanAir/">
+                                                <a aria-label="대한항공 웹 사이트로 이동합니다."
+                                                    href="https://simyoonji.github.io/KoreanAir/">
                                                     view
                                                 </a>
                                             </div>
@@ -368,10 +375,12 @@
                                                 <dt>Page</dt>
                                                 <dd>main</dd>
                                                 <dd>
-                                                    <a href="https://simyoonji.github.io/spar/login.html#none">login</a>
+                                                    <a aria-label="스파 로그인 페이지로 이동합니다."
+                                                        href="https://simyoonji.github.io/spar/login.html#none">login</a>
                                                 </dd>
                                                 <dd>
-                                                    <a href="https://simyoonji.github.io/spar/order.html">cart</a>
+                                                    <a aria-label="스파 장바구니 페이지로 이동합니다."
+                                                        href="https://simyoonji.github.io/spar/order.html">cart</a>
                                                 </dd>
                                             </dl>
 
@@ -394,7 +403,8 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://simyoonji.github.io/spar/">
+                                                <a aria-label="스파 웹 사이트로 이동합니다."
+                                                    href="https://simyoonji.github.io/spar/">
                                                     view
                                                 </a>
                                             </div>
@@ -417,9 +427,13 @@
                                             <dl>
                                                 <dt>Page</dt>
                                                 <dd>main</dd>
-                                                <dd><a href="https://simyoonji.github.io/profile/about.html">about</a>
+                                                <dd>
+                                                    <a aria-label="프로필 자기소개 페이지로 이동합니다."
+                                                        href="https://simyoonji.github.io/profile/about.html">about</a>
                                                 </dd>
-                                                <dd><a href="https://simyoonji.github.io/profile/skills.html">skills</a>
+                                                <dd>
+                                                    <a aria-label="프로필 스킬 페이지로 이동합니다."
+                                                        href="https://simyoonji.github.io/profile/skills.html">skills</a>
                                                 </dd>
                                             </dl>
                                             <dl>
@@ -440,7 +454,8 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://simyoonji.github.io/profile/">
+                                                <a aria-label="프로필 웹 사이트로 이동합니다."
+                                                    href="https://simyoonji.github.io/profile/">
                                                     view
                                                 </a>
                                             </div>
@@ -452,7 +467,7 @@
                     </li>
 
                     <li class="work-list">
-                        <button class="work-title">
+                        <button aria-label="팀프로젝트를 보여줍니다." class="work-title">
                             team
                         </button>
 
@@ -474,11 +489,17 @@
                                             <dl>
                                                 <dt>Page</dt>
                                                 <dd>main</dd>
-                                                <dd><a href="https://muvic.netlify.app/category/">category</a></dd>
-                                                <dd><a
+                                                <dd>
+                                                    <a aria-label="뮤빅 카테고리 페이지로 이동합니다."
+                                                        href="https://muvic.netlify.app/category/">category</a>
+                                                </dd>
+                                                <dd>
+                                                    <a aria-label="뮤빅 디테일 페이지로 이동합니다."
                                                         href="https://muvic.netlify.app/detail/index.html?movieId=940551">detail</a>
                                                 </dd>
-                                                <dd><a href="https://muvic.netlify.app/search/">search</a>
+                                                <dd>
+                                                    <a aria-label="뮤빅 검색 페이지로 이동합니다."
+                                                        href="https://muvic.netlify.app/search/">search</a>
                                                 </dd>
                                             </dl>
 
@@ -500,11 +521,11 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://muvic.netlify.app/">
+                                                <a aria-label="뮤빅 웹 사이트로 이동합니다." href="https://muvic.netlify.app/">
                                                     view
                                                 </a>
 
-                                                <a class="wireframe"
+                                                <a aria-label="뮤빅 와이어프레임으로 이동합니다." class="wireframe"
                                                     href="https://www.figma.com/design/X2F7l5GESKlY4AJgSPy8xS/home?node-id=0-1">
                                                     wireframe
                                                 </a>
@@ -530,11 +551,12 @@
                                                 <dd>main</dd>
                                                 <dd>
                                                     about &#40;&nbsp;
-                                                    <a
+                                                    <a aria-label="쇼파드 첫 번째 소개 페이지로 사이트로 이동합니다."
                                                         href="https://simyoonji.github.io/chopard/sub1">1</a>&nbsp;&#44;&nbsp;
-                                                    <a
+                                                    <a aria-label="쇼파드 두 번째 소개 페이지로 사이트로 이동합니다."
                                                         href="https://simyoonji.github.io/chopard/sub2">2</a>&nbsp;&#44;&nbsp;
-                                                    <a href="https://simyoonji.github.io/chopard/sub3">3</a>&nbsp;&#41;
+                                                    <a aria-label="쇼파드 세 번째 소개 페이지로 사이트로 이동합니다."
+                                                        href="https://simyoonji.github.io/chopard/sub3">3</a>&nbsp;&#41;
                                                 <dd>
                                             </dl>
 
@@ -555,7 +577,8 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://simyoonji.github.io/chopard/">
+                                                <a aria-label="쇼파드 웹 사이트로 이동합니다."
+                                                    href="https://simyoonji.github.io/chopard/">
                                                     view
                                                 </a>
                                             </div>
@@ -580,11 +603,16 @@
                                                 <dd>main</dd>
                                                 <dd>
                                                     about &#40;&nbsp;
-                                                    <a href="https://sksignet.netlify.app/sub1">1</a>&nbsp;&#44;&nbsp;
-                                                    <a href="https://sksignet.netlify.app/sub2">2</a>&nbsp;&#44;&nbsp;
-                                                    <a href="https://sksignet.netlify.app/sub3">3</a>&nbsp;&#44;&nbsp;
-                                                    <a href="https://sksignet.netlify.app/sub4">4</a>&nbsp;&#44;&nbsp;
-                                                    <a href="https://sksignet.netlify.app/sub5">5</a>&nbsp;&#41;
+                                                    <a aria-label="SK시그넷 첫 번째 소개 페이지로 사이트로 이동합니다."
+                                                        href="https://sksignet.netlify.app/sub1">1</a>&nbsp;&#44;&nbsp;
+                                                    <a aria-label="SK시그넷 두 번째 소개 페이지로 사이트로 이동합니다."
+                                                        href="https://sksignet.netlify.app/sub2">2</a>&nbsp;&#44;&nbsp;
+                                                    <a aria-label="SK시그넷 세 번째 소개 페이지로 사이트로 이동합니다."
+                                                        href="https://sksignet.netlify.app/sub3">3</a>&nbsp;&#44;&nbsp;
+                                                    <a aria-label="SK시그넷 네 번째 소개 페이지로 사이트로 이동합니다."
+                                                        href="https://sksignet.netlify.app/sub4">4</a>&nbsp;&#44;&nbsp;
+                                                    <a aria-label="SK시그넷 다섯 번째 소개 페이지로 사이트로 이동합니다."
+                                                        href="https://sksignet.netlify.app/sub5">5</a>&nbsp;&#41;
                                                 </dd>
                                             </dl>
 
@@ -604,7 +632,8 @@
                                                 빠르고 편하며 안전하게 충전할 수 있는 솔루션을 제공하는 충전 플랫폼 기업인 sk시그넷을 클론코딩 했습니다.
                                             </p>
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://sksignet.netlify.app/">
+                                                <a aria-label="SK시그넷 웹 사이트로 이동합니다."
+                                                    href="https://sksignet.netlify.app/">
                                                     view
                                                 </a>
                                             </div>
@@ -612,7 +641,7 @@
                                     </div>
                                 </li>
 
-                                <li class="no-img">
+                                <li aria-label="콘텐츠를 준비중 입니다." class="no-img">
                                     <img src="./img/no-img.png" alt="team">
                                     <img src="./img/no-img-m.jpg" alt="team">
                                 </li>
@@ -621,7 +650,7 @@
                     </li>
 
                     <li class="work-list">
-                        <button class="work-title">
+                        <button aria-label="스크립트 영역을 보여줍니다." class="work-title">
                             script
                         </button>
 
@@ -665,7 +694,8 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://simyoonji.github.io/newsTimes/">
+                                                <a aria-label="뉴스타임스 웹 사이트로 이동합니다."
+                                                    href="https://simyoonji.github.io/newsTimes/">
                                                     view
                                                 </a>
                                             </div>
@@ -708,7 +738,8 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://simyoonji.github.io/todoList/">
+                                                <a aria-label="투두리스트 웹 사이트로 이동합니다."
+                                                    href="https://simyoonji.github.io/todoList/">
                                                     view
                                                 </a>
                                             </div>
@@ -752,7 +783,8 @@
                                             </p>
 
                                             <div class="work-contents-explain-btn">
-                                                <a href="https://simyoonji.github.io/Random-Number-Choice/">
+                                                <a aria-label="랜덤숫자게임 웹 사이트로 이동합니다."
+                                                    href="https://simyoonji.github.io/Random-Number-Choice/">
                                                     view
                                                 </a>
                                             </div>
@@ -760,7 +792,7 @@
                                     </div>
                                 </li>
 
-                                <li class="no-img">
+                                <li aria-label="콘텐츠를 준비중 입니다." class="no-img">
                                     <img src="./img/no-img.png" alt="team">
                                     <img src="./img/no-img-m.jpg" alt="team">
                                 </li>
@@ -769,25 +801,25 @@
                     </li>
 
                     <li class="work-list">
-                        <button class="work-title">
+                        <button aria-label="일러스트 영역을 보여줍니다." class="work-title">
                             illust
                         </button>
 
                         <div class="work-contents">
                             <ul class="work-contents-illust">
-                                <li>
+                                <li aria-label="첫 번째 일러스트 입니다.">
                                     <img src="./img/illust-img-1.jpg" alt="illust">
                                     <img src="./img/illust-img-1-m.jpg" alt="illust">
                                 </li>
-                                <li>
+                                <li aria-label="두 번째 일러스트 입니다.">
                                     <img src="./img/illust-img-2.jpg" alt="illust">
                                     <img src="./img/illust-img-2-m.jpg" alt="illust">
                                 </li>
-                                <li>
+                                <li aria-label="세 번째 일러스트 입니다.">
                                     <img src="./img/illust-img-3.jpg" alt="illust">
                                     <img src="./img/illust-img-3-m.jpg" alt="illust">
                                 </li>
-                                <li class="no-img">
+                                <li aria-label="콘텐츠를 준비중 입니다." class="no-img">
                                     <img src="./img/no-img.png" alt="team">
                                     <img src="./img/no-img-m.jpg" alt="team">
                                 </li>
@@ -799,6 +831,7 @@
         </section>
 
         <section id="contact" class="contact">
+            <h2 class="txt-hide">contact</h2>
             <div class="contact-inner">
                 <p class="contact-lf">
                     Thank you for viewing
