@@ -683,7 +683,7 @@ section {
   display: block;
   width: 100%;
   height: 8rem;
-  background: url(../img/deco-line-img.png) center center repeat-x;
+  background: url(../img/deco-line-img-2.png) center center repeat-x;
   background-size: cover;
   animation: banner 20s infinite linear alternate-reverse;
   overflow: hidden;
