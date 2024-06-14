@@ -47,7 +47,7 @@
                     @include transition(font-size .2s ease);
                 }
                 @include mq('480') {
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     bottom: -1.5rem;
                 }
             }
@@ -203,9 +203,6 @@
                     left: -1rem;
                     font-size: 1.4rem;
                 }
-                @include mq('480') {
-                    font-size: 1.1rem;
-                }
             }
         }
     }
@@ -241,7 +238,7 @@
             }
             @include mq('480') {
                 flex-direction: column;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             h4 {
@@ -366,7 +363,7 @@
         }
         @include mq('480') {
             padding: .5rem 2rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         svg {

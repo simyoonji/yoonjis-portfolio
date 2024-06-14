@@ -1,195 +1,202 @@
 // top
 .top {
-    position: fixed;
-    right: 3rem;
-    bottom: 3rem;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: #eeeeee;
-    box-shadow: 0 0 1rem 0 #00000068;
-    opacity: 0;
-    z-index: 9998;
-    @include transition(opacity .2s ease, right .2s ease, bottom .2s ease, width .2s ease, height .2s ease, background-color .2s ease);
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  box-shadow: 0 0 1rem 0 #00000068;
+  opacity: 0;
+  z-index: 9998;
+  @include transition(
+    opacity 0.2s ease,
+    right 0.2s ease,
+    bottom 0.2s ease,
+    width 0.2s ease,
+    height 0.2s ease,
+    background-color 0.2s ease
+  );
 
-    &:hover {
-        background-color: #fff;
+  &:hover {
+    background-color: #fff;
+  }
+  @include mq("767") {
+    right: 2rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  @include mq("480") {
+    right: 1rem;
+    bottom: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  img {
+    @include position-ab();
+    width: 2rem;
+    height: 2rem;
+    @include mq("767") {
+      width: 1.5rem;
+      height: 1.5rem;
+      @include transition(width 0.2s ease, height 0.2s ease);
     }
-    @include mq('767'){
-        right: 2rem;
-        bottom: 2rem;
-        width: 3rem;
-        height: 3rem;
+    @include mq("480") {
+      width: 1rem;
+      height: 1rem;
     }
-    @include mq('480'){
-        right: 1rem;
-        bottom: 1rem;
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    img {
-        @include position-ab();
-        width: 2rem;
-        height: 2rem;
-        @include mq('767'){
-            width: 1.5rem;
-            height: 1.5rem;
-            @include transition(width .2s ease, height .2s ease);
-        }
-        @include mq('480'){
-            width: 1rem;
-            height: 1rem;
-        }
-    }
+  }
 }
 
 #home {
-    height: 100vh;
+  height: 100vh;
 }
 .scroll {
-    box-shadow: .5rem .5rem 2rem #ffffff27;
+  box-shadow: 0.5rem 0.5rem 2rem #ffffff27;
 }
 .header {
-    position: fixed;
-    width: 100%;
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-    color: $color-white;
-    background-color: $color-black;
-    @include transition(box-shadow .5s ease);
-    z-index: 9998;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  color: $color-white;
+  background-color: $color-black;
+  @include transition(box-shadow 0.5s ease);
+  z-index: 9998;
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 124rem;
-        margin: 0 auto;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 124rem;
+    margin: 0 auto;
 
-        h1 {
-            line-height: 1.2rem;
-            font-size: 2.5rem;
-            @include transition(color .2s ease, line-height .2s ease,font-size .2s ease);
+    h1 {
+      line-height: 1.2rem;
+      font-size: 2.5rem;
+      @include transition(
+        color 0.2s ease,
+        line-height 0.2s ease,
+        font-size 0.2s ease
+      );
 
-            @include mq('980') {
-                line-height: 1rem;
-                font-size: 2rem;
-            }
-            @include mq('600') {
-                line-height: .7rem;
-                font-size: 1.5rem;
-            }
-            @include mq('480') {
-                font-size: 1.3rem;
-            }
-            
-            em {
-                font-size: 2rem;
-                @include transition(font-size .2s ease);
+      @include mq("980") {
+        line-height: 1rem;
+        font-size: 2rem;
+      }
+      @include mq("600") {
+        line-height: 0.7rem;
+        font-size: 1.5rem;
+      }
+      @include mq("480") {
+        font-size: 1.3rem;
+      }
 
-                @include mq('980') {
-                    font-size: 1.5rem;
-                }
-                @include mq('600') {
-                    font-size: 1.2rem;
-                }
-                @include mq('480') {
-                    font-size: 1.1rem;
-                }
-                
-            }
-            &:hover {
-                color: $color-primary;
-            }
+      em {
+        font-size: 2rem;
+        @include transition(font-size 0.2s ease);
+
+        @include mq("980") {
+          font-size: 1.5rem;
         }
-        svg {
-            width: 3.2rem;
-            height: 3.2rem;
-            @include transition(width .2s ease, height .2s ease);
-
-            @include mq('980') {
-                width: 3rem;
-                height: 3rem;
-            }
-            @include mq('767') {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-            @include mq('600') {
-                width: 2rem;
-                height: 2rem;
-            }
-            @include mq('480') {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
+        @include mq("600") {
+          font-size: 1.2rem;
         }
+      }
+      &:hover {
+        color: $color-primary;
+      }
     }
+    svg {
+      width: 3.2rem;
+      height: 3.2rem;
+      @include transition(width 0.2s ease, height 0.2s ease);
 
-    &-menu {
-        display: flex;
-        gap: 2rem;
-
-        @include mq('980') {
-            gap: 1.5rem;
-        }
-        @include mq('767') {
-            gap: 1rem;
-        }
-        @include mq('600') {
-            gap: .5rem;
-        }
-        @include mq('480') {
-            gap: .1rem;
-        }
-        li {
-            position: relative;
-
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 0;
-                background-color: $color-white;
-                z-index: -1;
-                @include transition(height .2s ease);
-            }
-
-            &:hover {
-                &::before {
-                    height: 100%;
-                }
-                a {
-                    color: $color-black;
-                }
-            }
-            a {
-                padding: 1rem 1.5rem;
-                box-sizing: border-box;
-                font-size: 2rem;
-                @include transition(font-size .2s ease, padding .2s ease);
-
-                @include mq('980') {
-                    padding: 1rem 1.2rem;
-                    font-size: 1.8rem;
-                }
-                @include mq('767') {
-                    padding: 1rem;
-                    font-size: 1.6rem;
-                }
-                @include mq('600') {
-                    padding: 1rem .5rem;
-                    font-size: 1.3rem;
-                }
-                @include mq('480') {
-                    font-size: 1.1rem;
-                }
-            }
-        }
+      @include mq("980") {
+        width: 3rem;
+        height: 3rem;
+      }
+      @include mq("767") {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      @include mq("600") {
+        width: 2rem;
+        height: 2rem;
+      }
+      @include mq("480") {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
+  }
+
+  &-menu {
+    display: flex;
+    gap: 2rem;
+
+    @include mq("980") {
+      gap: 1.5rem;
+    }
+    @include mq("767") {
+      gap: 1rem;
+    }
+    @include mq("600") {
+      gap: 0.5rem;
+    }
+    @include mq("480") {
+      gap: 0.1rem;
+    }
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        background-color: $color-white;
+        z-index: -1;
+        @include transition(height 0.2s ease);
+      }
+
+      &:hover {
+        &::before {
+          height: 100%;
+        }
+        a {
+          color: $color-black;
+        }
+      }
+      a {
+        padding: 1rem 1.5rem;
+        box-sizing: border-box;
+        font-size: 2rem;
+        @include transition(font-size 0.2s ease, padding 0.2s ease);
+
+        @include mq("980") {
+          padding: 1rem 1.2rem;
+          font-size: 1.8rem;
+        }
+        @include mq("767") {
+          padding: 1rem;
+          font-size: 1.6rem;
+        }
+        @include mq("600") {
+          padding: 1rem 0.5rem;
+          font-size: 1.3rem;
+        }
+        @include mq("480") {
+           font-size: 1.2rem;
+        }
+      }
+    }
+  }
 }
 .color {
-    color: $color-primary;
+  color: $color-primary;
 }

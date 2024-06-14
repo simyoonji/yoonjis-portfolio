@@ -235,7 +235,7 @@
                     @include mq('480') {
                         width: 4rem;
                         margin: 0 .5rem 0 0;
-                        font-size: 1.1rem;
+                      font-size: 1.2rem;
                     }
                 }
                 dd {
@@ -267,7 +267,7 @@
                     @include transition(font-size .2s ease);
                 }
                 @include mq('480') {
-                    font-size: 1.1rem;
+                  font-size: 1.2rem;
                 }
             }
 

@@ -87,11 +87,17 @@ section {
   z-index: 9999;
   mix-blend-mode: difference;
   /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 767px) {
   .mouse {
     width: 1rem;
     height: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mouse {
+    display: none;
   }
 }
 
@@ -377,7 +383,6 @@ section {
   -o-transition: font-size 0.2s ease;
   /* tablet */
   /* mobile */
-  /* mobile */
 }
 @media screen and (max-width: 980px) {
   .header nav h1 em {
@@ -387,11 +392,6 @@ section {
 @media screen and (max-width: 600px) {
   .header nav h1 em {
     font-size: 1.2rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .header nav h1 em {
-    font-size: 1.1rem;
   }
 }
 .header nav h1:hover {
@@ -517,7 +517,7 @@ section {
 }
 @media screen and (max-width: 480px) {
   .header-menu li a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -672,7 +672,7 @@ section {
   .main-p {
     line-height: 1.5rem;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 .main .deco-line {
@@ -953,7 +953,7 @@ section {
 @media screen and (max-width: 480px) {
   .profile-txt p {
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1029,7 +1029,7 @@ section {
 }
 @media screen and (max-width: 480px) {
   .skills-inner h2::after {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     bottom: -1.5rem;
   }
 }
@@ -1192,7 +1192,6 @@ section {
   font-size: 2rem;
   /* mobile */
   /* mobile */
-  /* mobile */
 }
 @media screen and (max-width: 767px) {
   .skills-contents li h4 {
@@ -1212,11 +1211,6 @@ section {
   .skills-contents li h4 {
     left: -1rem;
     font-size: 1.4rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .skills-contents li h4 {
-    font-size: 1.1rem;
   }
 }
 .skills-graph {
@@ -1261,7 +1255,7 @@ section {
 @media screen and (max-width: 480px) {
   .skills-explain li {
     flex-direction: column;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 .skills-explain li h4 {
@@ -1438,7 +1432,7 @@ section {
 @media screen and (max-width: 480px) {
   .skills-note {
     padding: 0.5rem 2rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 .skills-note svg {
@@ -1773,7 +1767,7 @@ section {
   .work-contents-explain dl dt {
     width: 4rem;
     margin: 0 0.5rem 0 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 .work-contents-explain dl dd {
@@ -1819,7 +1813,7 @@ section {
 }
 @media screen and (max-width: 480px) {
   .work-contents-explain p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 .work-contents-explain-btn::after {

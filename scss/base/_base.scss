@@ -79,6 +79,9 @@ section {
     width: 1rem;
     height: 1rem;
   }
+  @include mq('600') {
+   display: none;
+}
 }
 .mouse-change {
   transform: scale(10);
